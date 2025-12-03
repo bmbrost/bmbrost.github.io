@@ -3,9 +3,9 @@ project:
   output-dir: docs
 
 website:
-  title: "bmbrost.github.io"
+  title: "Brain M. Brost"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
       - about.qmd
@@ -17,6 +17,6 @@ format:
       - brand
     css: styles.css
     toc: true
-
+    page-layout: full
 
 

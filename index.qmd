@@ -1,10 +1,23 @@
 ---
-title: "bmbrost.github.io"
+# title: "Brian Brost"
+image: media/headshot.jpg
+toc: false
+about: 
+  template: jolla
+  image-shape: round
+  image-width: 17em
+  links:
+    - text: LinkedIn
+      href: https://www.linkedin.com/in/bmbrost/
+    - text: GitHub
+      href: https://github.com/bmbrost
+    - text: Email
+      href: mailto:bmbrost@gmail.com
 ---
 
-This is a Quarto website.
+# Hi. 
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+I'm Brian. I work at the intersection of statistics,...
 
 ```{r}
 1 + 1
