@@ -7,8 +7,6 @@ about:
   image-shape: round
   image-width: 17em
   links:
-    - text: {{<fa brands github>}}
-      href: https://github.com/bmbrost
     - text: LinkedIn
       href: https://www.linkedin.com/in/bmbrost/
     - text: GitHub
@@ -17,7 +15,7 @@ about:
       href: mailto:bmbrost@gmail.com
 ---
 
-# Hi. 
+# Hi.
 
 I'm Brian. I work at the intersection of statistics,...
 
