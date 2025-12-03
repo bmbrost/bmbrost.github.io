@@ -1,0 +1,6 @@
+---
+# title: "CV"
+format: html
+---
+
+<iframe src="media/brost_cv.html" width="70%" height="800px" frameborder="0" color="white"></iframe>
