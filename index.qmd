@@ -7,6 +7,8 @@ about:
   image-shape: round
   image-width: 17em
   links:
+    - text: {{<fa brands github>}}
+      href: https://github.com/bmbrost
     - text: LinkedIn
       href: https://www.linkedin.com/in/bmbrost/
     - text: GitHub
