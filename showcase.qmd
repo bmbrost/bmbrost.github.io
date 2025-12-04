@@ -1,5 +1,14 @@
 ---
 title: "Showcase"
-format: html
+format: 
+  html:
+    page-layout: full
+
 ---
 
+
+
+<br>
+<footer class="footer-main"> 
+Brian M. Brost &copy; 2025 
+</footer>

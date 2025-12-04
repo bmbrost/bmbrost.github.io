@@ -3,8 +3,11 @@ project:
   output-dir: docs
 
 website:
-  title: "Brain M. Brost"
+  title: "Brian M. Brost"
+  favicon: media/logo.png
   navbar:
+    logo: media/logo.png
+    # logo-alt:
     right:
       - href: index.qmd
         text: Home
@@ -12,20 +15,28 @@ website:
         text: About
       - href: cv.qmd
         text: CV
-      - href: brost_cv.html
-        text: New CV
+      - href: media/brost_cv.html
+        text: CV (HTML)
+      - href: media/brost_cv.pdf # providing a relative file path to a pdf will open up a browser-based pdf viewer when clicked
+        text: CV (PDF)
+        target: _blank # opens link (or page) in a new browser tab
       - href: showcase.qmd
         text: Showcase
       - href: publications.qmd
         text: Publications
+  # page-footer:
+    # background: light # or `dark` or omit this option altogether (footer color will match page body color)
+    # left: Brian M. Brost &copy; 2025
+    # right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/bmbrost/bmbrost.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 format:
   html:
     theme:
-      light: cosmo
-      dark: solar
-    css: styles.css
+      - cosmo
+      - styles.scss
+    # mainfont: Nunito
+    # css: styles.css
     toc: true
-    page-layout: full
+    # page-layout: full
 
 

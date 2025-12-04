@@ -1,24 +1,36 @@
 ---
-# title: "Brian Brost"
+title: "Brian M. Brost"
 image: media/headshot.jpg
 toc: false
 about: 
   template: jolla
   image-shape: round
-  image-width: 17em
-  links:
-    - text: LinkedIn
-      href: https://www.linkedin.com/in/bmbrost/
-    - text: GitHub
-      href: https://github.com/bmbrost
-    - text: Email
-      href: mailto:bmbrost@gmail.com
+  image-width: 10em
+  # links:
+  #   - text: LinkedIn
+  #     href: https://www.linkedin.com/in/bmbrost/
+  #   - text: GitHub
+  #     href: https://github.com/bmbrost
+  #   - text: Email
+  #     href: mailto:bmbrost@gmail.com
+
+format: 
+  html:
+    page-layout: full
+
 ---
 
-# Hi.
+::: {#headline}
+Statistics + Spatial Analysis + Data Visualization
+:::  
 
-I'm Brian. I work at the intersection of statistics,...
+::: {#landing-icons}
+[{{< fa brands linkedin title="linkedin" >}}](https://www.linkedin.com/in/bmbrost/){target="_blank"} &nbsp;
+[{{< fa brands github title="github" >}}](https://github.com/bmbrost){target="_blank"} &nbsp; 
+[{{< fa envelope title="envelope" >}}](mailto:bmbrost@gmail.com)
+:::
 
-```{r}
-1 + 1
-```
+<br>
+<footer class="footer-main"> 
+Brian M. Brost &copy; 2025 
+</footer>

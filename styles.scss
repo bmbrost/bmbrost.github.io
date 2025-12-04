@@ -1,0 +1,114 @@
+/*-- scss:defaults --*/
+
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap');
+
+// Colors
+$dark-green: #858E79;
+$light-green: #D1D9CE;
+$cream: #FDFBF7;
+$gray: #64605f;
+$purple: #9158A2;
+$orange: #ad7237;
+$light-gray: lightgray;
+$black: black;
+//$blue: dodgerblue;
+
+// Base document colors
+// $navbar-bg: $light-gray; // navbar
+// $navbar-fg: black; // navbar foreground elements
+$navbar-hl: $black; // highlight color when hovering over navbar links
+// $body-bg: $light-green; // page background 
+// $body-color: $gray; // page text 
+// $footer-bg: $cream; // footer 
+$link-color: dodgerblue; // hyperlinks 
+
+// Inline code
+// $code-bg: $cream; // inline code background color
+// $code-color: $purple; // inline code text color
+
+/*-- scss:rules --*/
+
+// landing page icon size
+#landing-icons {
+  font-size: 1.5em;
+  color: black;
+}
+
+// landing page headline characteristics
+#headline {
+  font-size: 1.1em;
+  font-weight: 200;
+  color: gray;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+.container-about {
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  align-items: center;
+  text-align: justify;
+  justify-content: center;
+}
+
+.navbar-brand img { 
+  max-height: 50px;
+  width: auto;
+}
+
+.footer-main {
+    border-top: 1px solid lightgray;
+    padding: 40px 0;
+    margin: 40px 0 0;
+    font-size: 0.85em;
+    color: lightgray;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+}
+
+.footer-main::before {
+  display: block;
+  content: " ";
+  width: 7px;
+  height: 7px;
+  border: lightgray 1px solid;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  margin-left: -5px;
+  background: #FFF;
+  box-shadow: #FFF 0 0 0 5px;
+  border-radius: 3px;
+}
+
+.transparent-iframe {
+    //background-color: white;
+    background-color: #FFFFFF;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+#iframe {
+        opacity: 1;
+        -webkit-transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+        -ms-transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out;
+
+        width: 100%;
+        height: 650px;
+        margin: 0 auto;
+        display: block;
+        max-width: 1000px;
+      }
+
+  

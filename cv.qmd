@@ -1,26 +1,60 @@
 ---
 # title: "CV"
-format: html
+toc: false
+format: 
+  html:
+    page-layout: full
+    grid:
+      margin-width: 300px
+  # pdf: default
 ---
 
-<!-- <iframe src="media/brost_cv.html" width="100%" height="100%" frameborder="0" color="white"></iframe> -->
+::: column-margin
+<br>
+Other Formats:
 
-<!-- <iframe src="media/brost_cv.html" width="100%" height="100%" border="none" background-color= "#808080" display:block></iframe> -->
+{{< fa file-pdf >}} [PDF](https://github.com/bmbrost/cv/blob/main/out/general/brost_cv.pdf)
 
-<html>
-<head>
-<style>
-iframe {
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important; /* Optional: to remove any default border */
-  width: 100%;
-  height: 100%;
-}
-</style>
-</head>
-<body>
-<iframe src="media/brost_cv.html"></iframe>
-</body>
-</html>
+{{< fa file-pdf >}} [PDF](https://github.com/bmbrost/bmbrost.github.io/media/brost_cv.pdf)
+
+Download the [PDF output <i class="fa-solid fa-file-pdf"></i>](path/to/your/document.pdf)
+
+:::
+
+
+<!-- <embed src="media/brost_cv.html" width=100% height=100% /> -->
+<object type="text/html" data="media/brost_cv.html" width="840px" height="1080px" />
+<!-- <iframe id="iframe"src="media/brost_cv.html"></iframe> -->
+
+ <!-- <link rel="import" href="media/brost_cv.html"> -->
+
+<!-- ::: {.fullwidth} -->
+
+<!-- :::   -->
+<!-- <div> -->
+<!-- <main> -->
+<!-- <div style="padding-top:10pt"> -->
+<!-- <iframe src="media/brost_cv.html" width="100%" height="100%" frameborder="0" background-color="white"></iframe> -->
+
+<!-- </div> -->
+
+<!-- <br> -->
+<!-- <footer class="footer-main">  -->
+<!-- Brian M. Brost &copy; 2025  -->
+<!-- </footer> -->
+
+<!-- </main> -->
+<!-- </div> -->
+
+
+<!-- <iframe id="iframe"src="media/brost_cv.html"></iframe> -->
+
+<!-- <iframe class="transparent-iframe" allowtransparency="true" -->
+<!-- src="media/brost_cv.html" frameborder="0" height="184" width="100%"></iframe> -->
+
+<!-- </body> -->
+<!-- <div style="padding-top:-78px"> -->
+<!-- <iframe class="transparent-iframe" src="media/brost_cv.html" width="100%" height="100%" frameborder="0" allowtransparency="true" background-color: Snow;></iframe> -->
+<!-- </div> -->
+
 
