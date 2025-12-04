@@ -13,15 +13,15 @@ format:
 <br>
 Other Formats:
 
-{{< fa file-pdf >}} [PDF](https://bmbrost.github.io/cv/general/brost_cv.pdf)
-
+{{< fa file-pdf >}} [PDF](https://bmbrost.github.io/media/cv/general/brost_cv.pdf)
+ 
 <!-- Download the [PDF output <i class="fa-solid fa-file-pdf"></i>](path/to/your/document.pdf) -->
 
 :::
 
 
 <!-- <embed src="media/brost_cv.html" width=100% height=100% /> -->
-<object type="text/html" data="media/brost_cv.html" width="840px" height="1080px" />
+<object type="text/html" data="media/cv/general/brost_cv.html" width="840px" height="1080px" />
 
 <!-- <iframe id="iframe"src="media/brost_cv.html"></iframe> -->
 
