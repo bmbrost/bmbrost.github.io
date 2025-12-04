@@ -13,11 +13,9 @@ format:
 <br>
 Other Formats:
 
-{{< fa file-pdf >}} [PDF](https://github.com/bmbrost/cv/general/brost_cv.pdf)
+{{< fa file-pdf >}} [PDF](https://bmbrost.github.io/cv/general/brost_cv.pdf)
 
-{{< fa file-pdf >}} [PDF](https://github.com/bmbrost/bmbrost.github.io/docs/media/brost_cv.pdf)
-
-Download the [PDF output <i class="fa-solid fa-file-pdf"></i>](path/to/your/document.pdf)
+<!-- Download the [PDF output <i class="fa-solid fa-file-pdf"></i>](path/to/your/document.pdf) -->
 
 :::
 
