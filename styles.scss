@@ -17,7 +17,7 @@ $black: black;
 // Base document colors
 // $navbar-bg: $light-gray; // navbar
 // $navbar-fg: black; // navbar foreground elements
-$navbar-hl: $black; // highlight color when hovering over navbar links
+$navbar-hl: dodgerblue; // highlight color when hovering over navbar links
 // $body-bg: $light-green; // page background 
 // $body-color: $gray; // page text 
 // $footer-bg: $cream; // footer 
@@ -29,23 +29,47 @@ $link-color: dodgerblue; // hyperlinks
 
 /*-- scss:rules --*/
 
-// landing page icon size
-#landing-icons {
-  font-size: 1.5em;
-  color: black;
+// style headshot on landing page
+.about-image {
+  display: block;
+  object-fit: cover;
+  margin-top:2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  border-radius: 50%;
 }
 
+// Adjust "Brian M. Brost" on landing page
+.title {
+  text-align:center;
+  font-weight: 500;
+}
+
+// landing page icon size
+.landing-icons {
+  font-size: 1.5em;
+  color: black; 
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+
 // landing page headline characteristics
-#headline {
+.headline {
   font-size: 1.1em;
   font-weight: 200;
   color: gray;
+  text-align: center;
 }
 
 h1 {
   font-weight: 500;
 }
 
+
+// create a reduced width container
 .container-about {
   height: 100%;
   width: 60%;
@@ -57,11 +81,24 @@ h1 {
   justify-content: center;
 }
 
-.navbar-brand img { 
+// resize logo in navigation bar
+.navbar-brand img {
   max-height: 50px;
   width: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
+// change color and decoration of active link in navigation bar
+.navbar-nav .nav-link.active{
+  text-decoration: underline;
+  // text-decoration-color: black;
+  color: dodgerblue;
+}
+
+// customize footer
 .footer-main {
     border-top: 1px solid lightgray;
     padding: 40px 0;
@@ -73,6 +110,7 @@ h1 {
     position: relative;
 }
 
+// add 'circle' decoration to footer border
 .footer-main::before {
   display: block;
   content: " ";
@@ -88,27 +126,3 @@ h1 {
   border-radius: 3px;
 }
 
-.transparent-iframe {
-    //background-color: white;
-    background-color: #FFFFFF;
-    border: none;
-    width: 100%;
-    height: 100%;
-}
-
-#iframe {
-        opacity: 1;
-        -webkit-transition: all 300ms ease-in-out;
-        -moz-transition: all 300ms ease-in-out;
-        -o-transition: all 300ms ease-in-out;
-        -ms-transition: all 300ms ease-in-out;
-        transition: all 300ms ease-in-out;
-
-        width: 100%;
-        height: 650px;
-        margin: 0 auto;
-        display: block;
-        max-width: 1000px;
-      }
-
-  

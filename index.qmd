@@ -1,36 +1,47 @@
 ---
-title: "Brian M. Brost"
-image: media/headshot.jpg
+# title: "Brian M. Brost"
+pagetitle: "Brian Brost - Home"  # this goes in the browser tab
 toc: false
-about: 
-  template: jolla
-  image-shape: round
-  image-width: 10em
-  # links:
-  #   - text: LinkedIn
-  #     href: https://www.linkedin.com/in/bmbrost/
-  #   - text: GitHub
-  #     href: https://github.com/bmbrost
-  #   - text: Email
-  #     href: mailto:bmbrost@gmail.com
+
+# "About page" template setup...
+# image: media/headshot.jpg
+# about: 
+#   template: jolla
 
 format: 
   html:
-    page-layout: full
-
+    grid:
+      sidebar-width: 350px
+      body-width: 600px
+      margin-width: 350px
+      gutter-width: 2rem
+    # page-layout: full
 ---
 
-::: {#headline}
-Statistics + Spatial Analysis + Data Visualization
-:::  
+<!-- Add headshot -->
+<img class="about-image" src="media/headshot.jpg" style="width:12em; height:12em;">
 
-::: {#landing-icons}
-[{{< fa brands linkedin title="linkedin" >}}](https://www.linkedin.com/in/bmbrost/){target="_blank"} &nbsp;
-[{{< fa brands github title="github" >}}](https://github.com/bmbrost){target="_blank"} &nbsp; 
-[{{< fa envelope title="envelope" >}}](mailto:bmbrost@gmail.com)
+<!-- Name, headline, and links -->
+::: {.title}
+# Brian M. Brost
 :::
 
+::: {.headline}
+Statistics + Spatial Analysis + Data Visualization
+:::  
 <br>
-<footer class="footer-main"> 
-Brian M. Brost &copy; 2025 
+
+<!-- Icons for LinkedIn, GitHub, Email, etc. -->
+<div style="text-align:center">
+<a href="https://www.linkedin.com/in/bmbrost/" class="landing-icons" target="_blank">{{<fa brands linkedin title="LinkedIn">}}</a> &nbsp;
+<a href="https://github.com/bmbrost" class="landing-icons" target="_blank">{{<fa brands github title="GitHub">}}</a> &nbsp;
+<a onClick="javascript:window.open('mailto:bmbrost@gmail.com', 'mail');event.preventDefault()" href="mailto:bmbrost@gmail.com" class="landing-icons">{{<fa envelope title="Send an email">}}</a>
+</div> 
+
+<!-- Add footer -->
+<!-- See: https://quarto.org/docs/authoring/article-layout.html#overflowing-content -->
+::: {.column-page}
+<footer class="footer-main">
+Brian M. Brost &copy; 2025
 </footer>
+:::

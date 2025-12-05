@@ -1,5 +1,8 @@
 ---
-title: "Showcase"
+# title: "Showcase"
+pagetitle: "Brian Brost - Showcase"  # this goes in the browser tab
+toc: false
+
 format: 
   html:
     page-layout: full
@@ -7,8 +10,10 @@ format:
 ---
 
 
-
-<br>
+<!-- Add footer -->
+<!-- See: https://quarto.org/docs/authoring/article-layout.html#overflowing-content -->
+::: {.column-page}
 <footer class="footer-main"> 
 Brian M. Brost &copy; 2025 
 </footer>
+:::

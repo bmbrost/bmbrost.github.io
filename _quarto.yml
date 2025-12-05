@@ -3,7 +3,11 @@ project:
   output-dir: docs
 
 website:
-  title: "Brian M. Brost"
+  # google-analytics: true
+  # title: "My Website"
+  # title-prefix: "Site Name"
+  # title: "Brian M. Brost"
+  # title-prefix: "Brian Brost"
   favicon: media/logo.png
   navbar:
     logo: media/logo.png
@@ -15,11 +19,6 @@ website:
         text: About
       - href: cv.qmd
         text: CV
-      - href: media/brost_cv.html
-        text: CV (HTML)
-      - href: media/brost_cv.pdf # providing a relative file path to a pdf will open up a browser-based pdf viewer when clicked
-        text: CV (PDF)
-        target: _blank # opens link (or page) in a new browser tab
       - href: showcase.qmd
         text: Showcase
       - href: publications.qmd

@@ -1,48 +1,65 @@
 ---
 # title: "About"
+pagetitle: "Brian Brost - About"  # this goes in the browser tab
 toc: false
+
 format: 
   html:
-    # page-layout: full
     grid:
-      margin-width: 1500px
-  # pdf: default
-  
+      sidebar-width: 350px
+      body-width: 600px
+      margin-width: 350px
+      gutter-width: 2rem
 ---
-<!-- <body style="padding-top:0px"> -->
-<!-- <div class="container-about"> -->
-
-
-::: column-margin
-
-##### Education
-Ph.D.
-
-M.S.
-
-B.S.
-
-:::
-
-
 
 
 <div style="text-align:justify">
 # Hi.
 
 <br>
-I'm Brian. I work at the intersection of statistics, geospatial analysis, and data visualizaiton.
+I'm Brian. I work at the intersection of statistics, geospatial analysis, and conservation science. I have more than 15 years of experience finding the signal in a noisy world. I turn complex (and often messy) data into discovery through the application of advanced analytical techniques. In particular, I specialize in *boutique* Bayesian hierarchical models that account for common nuances such as measurement error, imperfect detection (i.e., false positives and negatives), and spatio-temporal dependence. I also enjoy conveying stories through high-quality graphics and cartographic design. 
 
-Data scientist, applied statistician, and spatial analyst with 15+ years of experience finding the signal in a noisy world. Highly skilled in advanced analytical techniques—including contemporary Bayesian hierarchical models—that turn complex (and often messy) data into discovery. Passionate about conveying stories through high-quality graphics and cartographic design. Motivated by challenging problems and a desire to leave the world a little better than I found it.
+I'm motivated by challenging problems and a desire to leave the world a little better than I found it. Please send me a <a href="mailto:bmbrost@gmail.com" style="color:black; text-decoration: underline;" title="Send an email">message</a> if you'd like to work together.
 
-I'm motivated by challenging problems and a desire to leave the world a little better than I found it. If you'd like to work with me, feel free to send me a message.
 
-<br>
-<footer class="footer-main"> 
-Brian M. Brost &copy; 2025 
-</footer>
+When not at my desk, I enjoy cooking (and baking), reading (usually non-fiction), an occasional cocktail (or two), and finding solitude in wild places (preferably on foot, bicycle, or packraft).
 
 </div>
 
-<!-- </body> -->
+<!-- ::: {.column-margin} -->
 
+<!-- #### Education -->
+<!-- <hr> -->
+
+<!-- **Colorado State University** | Fort Collins, CO -->
+
+<!-- Ph.D. in Ecology | 2017 -->
+
+<!-- **Northern Arizona University** | Flagstaff, AZ -->
+
+<!-- M.S. in Conservation Biology | 2010 -->
+
+<!-- **Northern Arizona University** | Flagstaff, AZ -->
+
+<!-- Graduate Certificate in Applied Statistics | 2009 -->
+
+<!-- **University of Wisconsin - Madison** | Madison, WI -->
+
+<!-- B.S. in Zoology and Conservation Biology | 2002 -->
+
+<!-- #### Experience -->
+<!-- <hr> -->
+
+<!-- NOAA | Statistician (Biology) | 2017 - 2025 -->
+
+<!-- GeoScynce | Chief Analyst | Spet 2012 - April 2018 -->
+
+<!-- ::: -->
+
+<!-- Add footer -->
+<!-- See: https://quarto.org/docs/authoring/article-layout.html#overflowing-content -->
+::: {.column-page}
+<footer class="footer-main"> 
+Brian M. Brost &copy; 2025 
+</footer>
+:::

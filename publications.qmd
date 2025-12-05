@@ -1,15 +1,24 @@
 ---
 # title: "Publications"
+pagetitle: "Brian Brost - Publications"  # this goes in the browser tab
+toc: false
+
 format: 
   html:
-    page-layout: full
-
+    grid:
+      sidebar-width: 350px
+      body-width: 600px
+      margin-width: 350px
+      gutter-width: 2rem
 ---
 
-<body style="padding-top:0px">
-<div class="container-about">
+<div style="text-align:justify">
 
+<!-- reversed ordered list -->
 <ol reversed>
+
+#### Manuscripts in prep and review
+<hr>
 
 <li> Sterling, J.T., and B.M. Brost. Summer resource limitation as a likely mechanism impacting northern fur seal (*Callorhinus ursinus*) recovery. </li>
 
@@ -23,49 +32,57 @@ format:
 
 <li> Brost, B.M. Abundance estimation of an endangered population of beluga whales using a dynamic N-mixture model. </li>
 
-<li> Conn, P.B., J.M. Ver Hoef, B.T. McClintock, D.S. Johnson, and B. Brost. A GLMM approach for combining multiple relative abundance surfaces. *Methods in Ecology and Evolution* **13**:2236–2247. [(pdf)](https://bmbrost.github.io/publications/Conn_et_al_MEE_2022.pdf) </li>
+#### Peer-reviewed publications
+<hr>
 
-<li> Johnson, D.S., B.M. Brost, and M.B. Hooten. Greater than the sum of its parts: computationally flexible Bayesian hierarchical modeling. *Journal of Agricultural, Biological, and Environmental Statistics* **27**:382–400. [(pdf)](https://bmbrost.github.io/publications/Johnson_et_al_JABES_2022.pdf) </li>
+<li> Conn, P.B., J.M. Ver Hoef, B.T. McClintock, D.S. Johnson, and B. Brost. A GLMM approach for combining multiple relative abundance surfaces. *Methods in Ecology and Evolution* **13**:2236–2247. [(pdf)](https://bmbrost.github.io/publications/Conn_et_al_MEE_2022.pdf){target="_blank"} </li>
 
-<li> Hooten, M.B., D.S. Johnson, and B.M. Brost. Making recursive Bayesian inference accessible. *The American Statistician* **75**:185–194. [(pdf)](https://bmbrost.github.io/publications/Hooten_et_al_AmStat_2021.pdf) </li>
+<li> Johnson, D.S., B.M. Brost, and M.B. Hooten. Greater than the sum of its parts: computationally flexible Bayesian hierarchical modeling. *Journal of Agricultural, Biological, and Environmental Statistics* **27**:382–400. [(pdf)](https://bmbrost.github.io/publications/Johnson_et_al_JABES_2022.pdf){target="_blank"} </li>
 
-<li> Brost, B.M., M.B. Hooten, and R.J. Small. Model-based clustering reveals patterns in central place use of a marine top predator. *Ecosphere* **11**(6):e03123. [(pdf)](https://bmbrost.github.io/publications/Brost_et_al_Ecosphere_2020.pdf) </li>
+<li> Hooten, M.B., D.S. Johnson, and B.M. Brost. Making recursive Bayesian inference accessible. *The American Statistician* **75**:185–194. [(pdf)](https://bmbrost.github.io/publications/Hooten_et_al_AmStat_2021.pdf){target="_blank"} </li>
 
-<li> Fritz, L., B. Brost, E. Laman, K. Luxa, K. Sweeney, J. Thomason, D. Tollit, W. Walker, and T. Zeppelin. A re-examination of the relationship between Steller sea lion (*Eumetopias jubatus*) diet and population trend using data from the Aleutian Islands. *Canadian Journal of Zoology* **97**:1137–1155. [(pdf)](https://bmbrost.github.io/publications/Fritz_et_al_CJZ_2019.pdf) </li>
+<li> Brost, B.M., M.B. Hooten, and R.J. Small. Model-based clustering reveals patterns in central place use of a marine top predator. *Ecosphere* **11**(6):e03123. [(pdf)](https://bmbrost.github.io/publications/Brost_et_al_Ecosphere_2020.pdf){target="_blank"} </li>
 
-<li> Zeppelin, T., N. Pelland, J. Sterling, B. Brost, S. Melin, D. Johnson, M. Lea, and R. Ream. Migratory strategies of juvenile northern fur seals (*Callorhinus ursinus*): bridging the gap between pups and adults. *Scientific Reports* **9**:13921. [(pdf)](https://bmbrost.github.io/publications/Zeppelin_et_al_SciReports_2019.pdf) </li>
+<li> Fritz, L., B. Brost, E. Laman, K. Luxa, K. Sweeney, J. Thomason, D. Tollit, W. Walker, and T. Zeppelin. A re-examination of the relationship between Steller sea lion (*Eumetopias jubatus*) diet and population trend using data from the Aleutian Islands. *Canadian Journal of Zoology* **97**:1137–1155. [(pdf)](https://bmbrost.github.io/publications/Fritz_et_al_CJZ_2019.pdf){target="_blank"} </li>
 
-<li> Brost, B.M., B.A. Mosher, and K.A. Davenport. A model-based solution for observational errors in laboratory studies. *Molecular Ecology Resources* **18**:580–589. [(pdf)](https://bmbrost.github.io/publications/Brost_et_al_MER_2018.pdf) </li>
+<li> Zeppelin, T., N. Pelland, J. Sterling, B. Brost, S. Melin, D. Johnson, M. Lea, and R. Ream. Migratory strategies of juvenile northern fur seals (*Callorhinus ursinus*): bridging the gap between pups and adults. *Scientific Reports* **9**:13921. [(pdf)](https://bmbrost.github.io/publications/Zeppelin_et_al_SciReports_2019.pdf){target="_blank"} </li>
 
-<li> Davenport, K.A., B.A. Mosher, B.M. Brost, D.M. Henderson, N.A. Denkers, A.V. Nalls, E. McNulty, C.K. Mathiason, and E.A. Hoover. Assessment of chronic wasting disease prion shedding in deer saliva with occupancy modeling. *Journal of Clinical Microbiology* **56**:e01243–17. [(pdf)](https://bmbrost.github.io/publications/Davenport_et_al_JCM_2018.pdf) </li>
+<li> Brost, B.M., B.A. Mosher, and K.A. Davenport. A model-based solution for observational errors in laboratory studies. *Molecular Ecology Resources* **18**:580–589. [(pdf)](https://bmbrost.github.io/publications/Brost_et_al_MER_2018.pdf){target="_blank"} </li>
 
-<li> Brost, B.M., M.B. Hooten, and R.J. Small. Leveraging constraints and biotelemetry data to pinpoint repetitively used spatial features. *Ecology* **98**:12–20. [(pdf)](https://bmbrost.github.io/publications/Brost_et_al_Ecology_2017.pdf) </li>
+<li> Davenport, K.A., B.A. Mosher, B.M. Brost, D.M. Henderson, N.A. Denkers, A.V. Nalls, E. McNulty, C.K. Mathiason, and E.A. Hoover. Assessment of chronic wasting disease prion shedding in deer saliva with occupancy modeling. *Journal of Clinical Microbiology* **56**:e01243–17. [(pdf)](https://bmbrost.github.io/publications/Davenport_et_al_JCM_2018.pdf){target="_blank"} </li>
 
-<li> Hefley, T.J., K.M. Broms, B.M. Brost, F.E. Buderman, S.L. Kay, H.R. Scharf, J.R. Tipton, P.J. Williams, and M.B. Hooten. The basis function approach for modeling autocorrelation in ecological data. *Ecology* **98**:632–646. [(pdf)](https://bmbrost.github.io/publications/Hefley_et_al_Ecology_2017.pdf) </li>
+<li> Brost, B.M., M.B. Hooten, and R.J. Small. Leveraging constraints and biotelemetry data to pinpoint repetitively used spatial features. *Ecology* **98**:12–20. [(pdf)](https://bmbrost.github.io/publications/Brost_et_al_Ecology_2017.pdf){target="_blank"} </li>
 
-<li> Hefley, T.J., B.M. Brost, and M.B. Hooten. Bias correction of bounded location errors in presence-only data. *Methods in Ecology and Evolution* **8**:1566–1573. [(pdf)](https://bmbrost.github.io/publications/Hefley_et_al_MEE_2017.pdf) </li>
+<li> Hefley, T.J., K.M. Broms, B.M. Brost, F.E. Buderman, S.L. Kay, H.R. Scharf, J.R. Tipton, P.J. Williams, and M.B. Hooten. The basis function approach for modeling autocorrelation in ecological data. *Ecology* **98**:632–646. [(pdf)](https://bmbrost.github.io/publications/Hefley_et_al_Ecology_2017.pdf){target="_blank"} </li>
 
-<li> Small, R.J., B. Brost, M. Hooten, M. Castellote, and J. Mondragon. Potential for spatial displacement of Cook Inlet beluga whales by anthropogenic noise in critical habitat. *Endangered Species Research* **32**:43–57. [(pdf)](https://bmbrost.github.io/publications/Small_et_al_ESR_2017.pdf) </li>
+<li> Hefley, T.J., B.M. Brost, and M.B. Hooten. Bias correction of bounded location errors in presence-only data. *Methods in Ecology and Evolution* **8**:1566–1573. [(pdf)](https://bmbrost.github.io/publications/Hefley_et_al_MEE_2017.pdf){target="_blank"} </li>
 
-<li> Hooten, M.B., F.E. Buderman, B.M. Brost, E.M. Hanks, and J.S. Ivan. Hierarchical animal movement models for population-level inference. *Environmetrics* **27**:322–333. [(pdf)](https://bmbrost.github.io/publications/Hooten_et_al_Environmetrics_2016.pdf) </li>
+<li> Small, R.J., B. Brost, M. Hooten, M. Castellote, and J. Mondragon. Potential for spatial displacement of Cook Inlet beluga whales by anthropogenic noise in critical habitat. *Endangered Species Research* **32**:43–57. [(pdf)](https://bmbrost.github.io/publications/Small_et_al_ESR_2017.pdf){target="_blank"} </li>
 
-<li> Brost, B.M., M.B. Hooten, E.M. Hanks, and R.J. Small. Animal movement constraints improve resource selection inference in the presence of telemetry error. *Ecology* **96**:2590–2597. [(pdf)](https://bmbrost.github.io/publications/Brost_et_al_Ecology_2015.pdf) </li>
+<li> Hooten, M.B., F.E. Buderman, B.M. Brost, E.M. Hanks, and J.S. Ivan. Hierarchical animal movement models for population-level inference. *Environmetrics* **27**:322–333. [(pdf)](https://bmbrost.github.io/publications/Hooten_et_al_Environmetrics_2016.pdf){target="_blank"} </li>
+
+<li> Brost, B.M., M.B. Hooten, E.M. Hanks, and R.J. Small. Animal movement constraints improve resource selection inference in the presence of telemetry error. *Ecology* **96**:2590–2597. [(pdf)](https://bmbrost.github.io/publications/Brost_et_al_Ecology_2015.pdf){target="_blank"} </li>
 
 <li> Brost, B.M., and P. Beier. Comparing linkage designs based on land facets to linkage designs based on focal species. *PLoS One* **7**:e48965. [(pdf)](https://bmbrost.github.io/publications/Brost_Beier_PONE_2012.pdf)
-Brost, B.M., and P. Beier. Use of land facets to design linkages for climate change. *Ecological Applications* **22**:87–103. [(pdf)](https://bmbrost.github.io/publications/Brost_Beier_EcolApps_2012.pdf) </li>
+Brost, B.M., and P. Beier. Use of land facets to design linkages for climate change. *Ecological Applications* **22**:87–103. [(pdf)](https://bmbrost.github.io/publications/Brost_Beier_EcolApps_2012.pdf){target="_blank"} </li>
 
-<li> Beier, P., and B. Brost. Use of land facets to plan for climate change: Conserving the arenas, not the actors. *Conservation Biology* **24**:701–710. [(pdf)](https://bmbrost.github.io/publications/Beier_Brost_ConsBio_2010.pdf) </li>
+<li> Beier, P., and B. Brost. Use of land facets to plan for climate change: Conserving the arenas, not the actors. *Conservation Biology* **24**:701–710. [(pdf)](https://bmbrost.github.io/publications/Beier_Brost_ConsBio_2010.pdf){target="_blank"} </li>
 
-<li> McMaster, M.A., A. Thode, B. Brost, M. Williamson, E. Aumack, D. Mertz. Changes in vegetation and fuels due to the Warm Fire on the Kaibab National Forest. *Joint Fire Science Program Research Project Reports* 34. [(pdf)](https://bmbrost.github.io/publications/McMaster_et_al_JFSP_2010.pdf) </li>
+#### Book chapters and white papers
+<hr>
 
-<li> Wydeven, A.P., A. Treves, B. Brost, and J.E. Wiedenhoeft. Characteristics of wolf packs in Wisconsin: Identification of traits influencing depredation. In *People and Predators: From Conflict to Coexistence,* eds. N. Fascione, A. Delach, and M. E. Smith. Island Press, Washington, D.C. [(pdf)](https://bmbrost.github.io/publications/Wydeven_et_al_preprint_2004.pdf) </li>
+<li> McMaster, M.A., A. Thode, B. Brost, M. Williamson, E. Aumack, D. Mertz. Changes in vegetation and fuels due to the Warm Fire on the Kaibab National Forest. *Joint Fire Science Program Research Project Reports* 34. [(pdf)](https://bmbrost.github.io/publications/McMaster_et_al_JFSP_2010.pdf){target="_blank"} </li>
+
+<li> Wydeven, A.P., A. Treves, B. Brost, and J.E. Wiedenhoeft. Characteristics of wolf packs in Wisconsin: Identification of traits influencing depredation. In *People and Predators: From Conflict to Coexistence,* eds. N. Fascione, A. Delach, and M. E. Smith. Island Press, Washington, D.C. [(pdf)](https://bmbrost.github.io/publications/Wydeven_et_al_preprint_2004.pdf){target="_blank"} </li>
 
 </ol>
 
-<br>
+</div>
+
+<!-- Add footer -->
+<!-- See: https://quarto.org/docs/authoring/article-layout.html#overflowing-content -->
+::: {.column-page}
 <footer class="footer-main"> 
 Brian M. Brost &copy; 2025 
 </footer>
-
-</div>
-</body>
+:::
