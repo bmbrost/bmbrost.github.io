@@ -9,6 +9,8 @@ format:
 
 ---
 
+<!-- Examples for inspiration: -->
+<!-- https://www.etiennebacher.com/gallery -->
 
 <!-- Add footer -->
 <!-- See: https://quarto.org/docs/authoring/article-layout.html#overflowing-content -->

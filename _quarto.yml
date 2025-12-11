@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  # google-analytics: true
+  google-analytics: "G-GMY5LHEEJL"
   # title: "My Website"
   # title-prefix: "Site Name"
   # title: "Brian M. Brost"
