@@ -28,7 +28,7 @@ format:
 ::: 
 
 <!-- Embed HTML version of CV -->
-<object type="text/html" data="media/brost_cv.html" width="840px" height="1080px" />
+<object type="text/html" data="https://bmbrost.github.io/media/brost_cv.html" width="840px" height="1080px" />
 
 <!-- Add footer -->
 <!-- ::: {.column-page} -->

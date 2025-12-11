@@ -15,13 +15,13 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - href: about.qmd
+      - href: about/index.qmd
         text: About
-      - href: cv.qmd
+      - href: cv/index.qmd
         text: CV
-      - href: showcase.qmd
+      - href: showcase/index.qmd
         text: Showcase
-      - href: publications.qmd
+      - href: publications/index.qmd
         text: Publications
   # page-footer:
     # background: light # or `dark` or omit this option altogether (footer color will match page body color)

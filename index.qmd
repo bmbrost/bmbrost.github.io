@@ -1,5 +1,5 @@
 ---
-# title: "Brian M. Brost"
+# title: "Home"
 pagetitle: "Brian Brost - Home"  # this goes in the browser tab
 toc: false
 
