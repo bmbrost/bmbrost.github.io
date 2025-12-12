@@ -33,8 +33,8 @@ Statistics + Spatial Analysis + Data Visualization
 
 <!-- Icons for LinkedIn, GitHub, Email, etc. -->
 <div style="text-align:center">
-<a href="https://www.linkedin.com/in/bmbrost/" class="landing-icons" target="_blank">{{<fa brands linkedin title="LinkedIn">}}</a> &nbsp;
-<a href="https://github.com/bmbrost" class="landing-icons" target="_blank">{{<fa brands github title="GitHub">}}</a> &nbsp;
+<a href="https://www.linkedin.com/in/bmbrost/" class="landing-icons" target="_blank">{{<fa brands linkedin title="LinkedIn">}}</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/bmbrost" class="landing-icons" target="_blank">{{<fa brands github title="GitHub">}}</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a onClick="javascript:window.open('mailto:bmbrost@gmail.com', 'mail');event.preventDefault()" href="mailto:bmbrost@gmail.com" class="landing-icons">{{<fa envelope title="Send an email">}}</a>
 </div> 
 

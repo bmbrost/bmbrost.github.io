@@ -15,22 +15,23 @@ format:
       gutter-width: 2rem
   
 ---
-<!-- sidebar-width: 350px -->
-<!-- body-width: 600px -->
-<!-- margin-width: 350px -->
-<!-- gutter-width: 2rem -->
+
+<!-- Examples for inspiration: -->
+<!-- https://allisonhorst.github.io/cv.html -->
 
 <!-- PDF/HTML format options in right margin -->
 ::: column-margin
 <br> Other Formats:
-<br> &nbsp;&nbsp;&nbsp;&nbsp;{{<fa regular file-pdf title="PDF">}} [PDF](https://bmbrost.github.io/cv/brost_cv.pdf){target="_blank"}
-<br> &nbsp;&nbsp;&nbsp;&nbsp;{{<fa regular file-code title="HTML">}}&nbsp;&nbsp;[HTML](https://bmbrost.github.io/media/brost_cv.html){target="_blank"}
-::: 
 
+&nbsp;&nbsp;&nbsp;&nbsp;{{<fa regular file-pdf title="PDF">}}&nbsp;&nbsp; [PDF](/cv/brost_cv.pdf){target="_blank"}
+
+&nbsp;&nbsp;&nbsp;&nbsp;{{<fa regular file-code title="HTML">}} &nbsp;&nbsp; [HTML](/cv/brost_cv.html){target="_blank"}
+::: 
+ 
 <!-- ../media/brost_cv.html? Why don't links work when files are in cv/? -->
 
 <!-- Embed HTML version of CV -->
-<object type="text/html" data="https://bmbrost.github.io/media/brost_cv.html" width="840px" height="1080px" />
+<object type="text/html" data="/cv/brost_cv.html" width="840px" height="1080px" />
 
 <!-- Add footer -->
 <!-- ::: {.column-page} -->

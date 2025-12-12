@@ -3,11 +3,24 @@
 pagetitle: "Brian Brost - Showcase"  # this goes in the browser tab
 toc: false
 
+# format: 
+#   html:
+#     page-layout: full
+    
 format: 
   html:
-    page-layout: full
-
+    grid:
+      sidebar-width: 150px
+      body-width: 1000px
+      margin-width: 150px
+      gutter-width: 2rem
 ---
+
+### Coming soon...
+
+<br>
+
+<img src="/showcase/dgo.png" width="800px" class="center">
 
 <!-- Examples for inspiration: -->
 <!-- https://www.etiennebacher.com/gallery -->
