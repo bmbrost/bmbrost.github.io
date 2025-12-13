@@ -1,0 +1,31 @@
+---
+title: "Use of Land Facets to Plan for Climate Change: Conserving the Arenas, Not the Actors "
+toc: false
+author: 
+- Paul Beier
+- Brian Brost
+  # orcid: 0000-0002-9810-3950
+date: 2025-04-14
+slug: tbi-survival
+# image: featured.png
+# categories:
+#   - research 
+#   - EHR
+#   - TBI
+description: 'Conservation Biology'
+subtitle: Insert brief description here...
+links:
+- icon: fa regular file-pdf
+  name: PDF
+  url: (https://bmbrost.github.io/publications/Beier_Brost_ConsBio_2010.pdf){target="_blank"}
+# - icon: github
+#   name: Relevant files
+#   url: 
+---
+
+Download PDF: [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/Beier_Brost_ConsBio_2010.pdf){target="_blank"}
+
+## Abstract
+
+Even under the most optimistic scenarios, during the next century human-caused climate change will threaten many wild populations and species. The most useful conservation response is to enlarge and link protected areas to support range shifts by plants and animals. To prioritize land for reserves and linkages, some scientists attempt to chain together four highly uncertain models (emission scenarios, global air–ocean circulation, regional circulation, and biotic response). This approach has high risk of error propagation and compounding and produces outputs at a coarser scale than conservation decisions. Instead, we advocate identifying land facets—recurring landscape units with uniform topographic and soil attributes—and designing reserves and linkages for diversity and interspersion of these units. This coarse-filter approach would conserve the arenas of biological activity, rather than the temporary occupants of those arenas. Integrative, context-sensitive variables, such as insolation and topographic wetness, are useful for defining land facets. Classification procedures such as k-means or fuzzy clustering are a good way to define land facets because they can analyze millions of pixels and are insensitive to case order. In regions lacking useful soil maps, river systems or riparian plants can indicate important facets. Conservation planners should set higher representation targets for rare and distinctive facets. High interspersion of land facets can promote ecological processes, evolutionary interaction, and range shift. Relevant studies suggest land-facet diversity is a good surrogate for today's biodiversity, but fails to conserve some species. To minimize such failures, a reserve design based on land facets should complement, rather than replace, other approaches. Designs based on land facets are not biased toward data-rich areas and can be applied where no maps of land cover exist.
+

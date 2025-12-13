@@ -23,6 +23,10 @@ website:
         text: Showcase
       - href: publications/index.qmd
         text: Publications
+      # - href: pubs_sc/index.qmd
+      #   text: Publications Listing
+      # - href: pubs_al/index.qmd
+      #   text: Publications Listing
   # page-footer:
     # background: light # or `dark` or omit this option altogether (footer color will match page body color)
     # left: Brian M. Brost &copy; 2025
@@ -33,7 +37,7 @@ format:
     theme:
       - cosmo
       - styles.scss
-    # mainfont: Nunito
+    # mainfont: Petrona
     # css: styles.css
     toc: true
     # page-layout: full

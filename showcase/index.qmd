@@ -16,14 +16,15 @@ format:
       gutter-width: 2rem
 ---
 
-### Coming soon...
+<!-- Examples for inspiration: -->
+<!-- https://avrodrigues.github.io/dataviz.html -->
+<!-- https://www.etiennebacher.com/gallery -->
+
+
+# Coming soon...
 
 <br>
-
-<img src="/showcase/dgo.png" width="800px" class="center">
-
-<!-- Examples for inspiration: -->
-<!-- https://www.etiennebacher.com/gallery -->
+<img src="/showcase/dgo.png" width="800px" class="center" border="1px solid #555">
 
 <!-- Add footer -->
 <!-- See: https://quarto.org/docs/authoring/article-layout.html#overflowing-content -->

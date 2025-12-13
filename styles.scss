@@ -1,7 +1,8 @@
 /*-- scss:defaults --*/
 
-// Import Google fonts
+// Import Google fonts (https://fonts.google.com/)
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100..900;1,100..900&display=swap');
 
 // Colors
 $dark-green: #858E79;
@@ -13,15 +14,21 @@ $orange: #ad7237;
 $light-gray: lightgray;
 $black: black;
 //$blue: dodgerblue;
+$cream: #fffbf2;
+$burnt-orange: #a23e02;
 
 // Base document colors
 // $navbar-bg: $light-gray; // navbar
 // $navbar-fg: black; // navbar foreground elements
 $navbar-hl: dodgerblue; // highlight color when hovering over navbar links
-// $body-bg: $light-green; // page background 
 // $body-color: $gray; // page text 
 // $footer-bg: $cream; // footer 
 $link-color: dodgerblue; // hyperlinks 
+
+// Styling like https://silviacanelon.com
+// $body-bg: $cream; // page background 
+// $navbar-bg: $cream; // navbar
+// font-family: Petrona;  // for large fonts 
 
 // Inline code
 // $code-bg: $cream; // inline code background color
@@ -42,6 +49,8 @@ $link-color: dodgerblue; // hyperlinks
 
 // Adjust "Brian M. Brost" on landing page
 .title {
+  // font-family: Petrona;
+  color: #002642;
   text-align:center;
   font-weight: 500;
 }
@@ -65,6 +74,7 @@ $link-color: dodgerblue; // hyperlinks
 }
 
 h1 {
+  font-family: Petrona;
   font-weight: 500;
 }
 
