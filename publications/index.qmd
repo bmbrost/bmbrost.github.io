@@ -1,94 +1,432 @@
 ---
-# title: "Publications"
-pagetitle: "Brian Brost - Publications"  # this goes in the browser tab
+pagetitle: "Publications"
 toc: false
-
-format: 
-  html:
-    grid:
-      sidebar-width: 350px
-      body-width: 600px
-      margin-width: 350px
-      gutter-width: 2rem
+bibliography: publications.bib
+csl: apa.csl
+nocite: | 
+  @*
+execute: 
+  echo: false
+  warning: false
+  message: false
 ---
 
-<!-- Examples for inspiration: -->
-<!-- https://affcom.ku.edu/publications.html; https://github.com/jmgirard/affcomlab/tree/main -->
-<!-- https://faculty.washington.edu/masiello/publications/ -->
-<!-- https://silviacanelon.com/publication/#category=research -->
+<!-- ```{=html} -->
+<!-- <nav aria-label="breadcrumb"> -->
+<!--   <ol class="breadcrumb"> -->
+<!--     <li class="breadcrumb-item"><a href="index.html">Home</a></li> -->
+<!--     <li class="breadcrumb-item active" aria-current="page">Publications</li> -->
+<!--   </ol> -->
+<!-- </nav> -->
+<!-- ``` -->
+ 
+<!-- This page lists all papers published by Dr. Girard, organized by year of publication. Click a paper’s *title* to visit the publisher page and access the official version. Use *Abstract* to reveal the summary, *Citation* for the APA 7th-edition reference, and *BibTeX* to view the BibTeX entry. Clicking the link a second time will close the display again. *Preprint* links to a free author version (not the final typeset copy), and *Materials* leads to an open repository with data, code, and other open-science resources. <span style="font-size:0.9rem; opacity:0.8; margin-bottom:0.5rem;">★ = Work led or co-led by our lab (established in 2020)</span> -->
+ 
+ 
+```{r setup}
+library(tidyverse)
+library(RefManageR)
+library(htmltools)
 
-<div style="text-align:justify">
+`%||%` <- function(a, b) if (is.null(a) || length(a) == 0) b else a
+nz_chr <- function(x) ifelse(is.na(x) | trimws(x) == "", NA_character_, x)
 
-<!-- reversed ordered list -->
-<ol reversed>
+strip_braces <- function(x) {
+  if (is.null(x) || length(x) == 0) return(NA_character_)
+  y <- as.character(x)
+  gsub("[{}]", "", y, perl = TRUE)
+}
 
-#### Manuscripts in prep and review
-<hr>
+fmt_authors_card <- function(entry) {
+  au <- entry$author
+  if (is.null(au) || length(au) == 0) return(NA_character_)
+  fmt_one <- function(a) {
+    fam_vec <- a$family
+    if (length(fam_vec)) paste(as.character(fam_vec), collapse = " ") else ""
+  }
+  pieces <- vapply(au, fmt_one, character(1))
+  pieces <- pieces[nzchar(pieces)]
+  if (!length(pieces)) return(NA_character_)
+  if (length(pieces) == 1) pieces
+  else paste(paste(pieces[-length(pieces)], collapse = ", "), "&", pieces[length(pieces)])
+}
 
-<li> Sterling, J.T., and B.M. Brost. Summer resource limitation as a likely mechanism impacting northern fur seal (*Callorhinus ursinus*) recovery. </li>
+get_abstract <- function(entry) {
+  abs <- entry$abstract %||% entry$annotation %||% NA_character_
+  if (isTRUE(is.na(abs)) || !nzchar(abs)) NA_character_ else abs
+}
 
-<li> Brost, B.M, and N. Young. Hierarchical models improve inference concerning marine mammal mortalities incidental to commercial fishing activities. </li>
+get_bibtex <- function(entry) {
+  out <- tryCatch({
+    e <- entry
+    if (!is.null(e$note)) e$note <- NULL
+    if (!is.null(e$Note)) e$Note <- NULL
+    txt <- paste0(utils::toBibtex(e), collapse = "\n")
+    txt <- sub(",\\s*\\n?\\s*\\}$", "\n}", txt, perl = TRUE)
+    txt <- gsub("\n{3,}", "\n\n", txt)
+    txt
+  }, error = function(err) NA_character_)
+  if (is.na(out) || !nzchar(out)) NA_character_ else out
+}
 
-<li> Zeppelin, T.K., B.M. Brost, D.S. Johnson, C.M. Kurle, B.A. Güell, C. Keller, M.T. Williams, and A.E. York. Determining cryptic life history milestones using isotopic markers in northern fur seal (*Callorhinus ursinus*) vibrissae. </li>
+normalize_link <- function(x) {
+  y <- as.character(x)
+  y[is.na(y)] <- NA_character_
+  y <- trimws(y)
+  y[y == "" | tolower(y) == "na"] <- NA_character_
 
-<li> McCormley, M., B.M. Brost, B. Fadely, and A. Warlick. A hierarchical multistate model reveals parturition and pupping patterns for western Steller sea lions (*Eumetopias jubatus*). </li>
+  ok <- !is.na(y)
 
-<li> Brost, B.M. A general framework for quantifying telemetry measurement error without a secondary data source. </li>
+  doi_pref <- ok & grepl("^doi:\\s*", y, ignore.case = TRUE)
+  y[doi_pref] <- sub("^doi:\\s*", "", y[doi_pref], ignore.case = TRUE)
+  bare_doi <- ok & grepl("^10\\.", y)
+  y[bare_doi] <- paste0("https://doi.org/", y[bare_doi])
 
-<li> Brost, B.M. Abundance estimation of an endangered population of beluga whales using a dynamic N-mixture model. </li>
+  arxiv_pref <- ok & grepl("^arxiv:\\s*", y, ignore.case = TRUE)
+  if (any(arxiv_pref)) {
+    ids <- sub("^arxiv:\\s*", "", y[arxiv_pref], ignore.case = TRUE)
+    ids <- sub("^([^\\s]+).*", "\\1", ids)
+    y[arxiv_pref] <- paste0("https://arxiv.org/abs/", ids)
+  }
 
-#### Peer-reviewed publications
-<hr>
+  domain_like <- ok & grepl("^(www\\.|[A-Za-z0-9.-]+\\.[A-Za-z]{2,})(/|$)", y)
+  no_scheme   <- ok & !grepl("^https?://", y, ignore.case = TRUE)
+  needs_scheme <- domain_like & no_scheme
+  y[needs_scheme] <- paste0("https://", y[needs_scheme])
 
-<li> Conn, P.B., J.M. Ver Hoef, B.T. McClintock, D.S. Johnson, and B. Brost. 2022. A GLMM approach for combining multiple relative abundance surfaces. *Methods in Ecology and Evolution* **13**:2236–2247. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Conn_et_al_MEE_2022.pdf){target="_blank"} </li>
+  y
+}
+```
 
-<li> Johnson, D.S., B.M. Brost, and M.B. Hooten. 2022. Greater than the sum of its parts: computationally flexible Bayesian hierarchical modeling. *Journal of Agricultural, Biological, and Environmental Statistics* **27**:382–400. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Johnson_et_al_JABES_2022.pdf){target="_blank"} </li>
+```{r}
+#| label: build-rows
 
-<li> Hooten, M.B., D.S. Johnson, and B.M. Brost. 2021. Making recursive Bayesian inference accessible. *The American Statistician* **75**:185–194. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Hooten_et_al_AmStat_2021.pdf){target="_blank"} </li>
+bib  <- ReadBib("publications.bib", check = FALSE)
+keys <- names(bib)
 
-<li> Brost, B.M., M.B. Hooten, and R.J. Small. 2020. Model-based clustering reveals patterns in central place use of a marine top predator. *Ecosphere* **11**(6):e03123. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Brost_et_al_Ecosphere_2020.pdf){target="_blank"} </li>
+extra_links <- tibble(key = character(), preprint = character(), materials = character())
 
-<li> Fritz, L., B. Brost, E. Laman, K. Luxa, K. Sweeney, J. Thomason, D. Tollit, W. Walker, and T. Zeppelin. 2019. A re-examination of the relationship between Steller sea lion (*Eumetopias jubatus*) diet and population trend using data from the Aleutian Islands. *Canadian Journal of Zoology* **97**:1137–1155. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Fritz_et_al_CJZ_2019.pdf){target="_blank"} </li>
+rows <- tibble(
+  key   = keys,
+  entry = lapply(keys, function(k) bib[k])
+) |>
+  mutate(
+    title        = map_chr(entry, ~ strip_braces(.x$title %||% "")),
+    authors_card = map_chr(entry, fmt_authors_card),
+    year         = map_chr(entry, ~ {
+      y <- .x$year %||% .x$date %||% ""
+      if (is.list(y)) y$year %||% "" else as.character(y)
+    }),
+    venue        = map_chr(entry, ~ strip_braces(.x$journal %||% .x$booktitle %||% .x$publisher %||% "")),
+    abstract     = map_chr(entry, get_abstract),
+    bibtex       = map_chr(entry, get_bibtex),
 
-<li> Zeppelin, T., N. Pelland, J. Sterling, B. Brost, S. Melin, D. Johnson, M. Lea, and R. Ream. 2019. Migratory strategies of juvenile northern fur seals (*Callorhinus ursinus*): bridging the gap between pups and adults. *Scientific Reports* **9**:13921. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Zeppelin_et_al_SciReports_2019.pdf){target="_blank"} </li>
+    doi          = map_chr(entry, ~ .x$doi %||% NA_character_),
+    url_fallback = map_chr(entry, ~ .x$url %||% NA_character_),
 
-<li> Brost, B.M., B.A. Mosher, and K.A. Davenport. 2018. A model-based solution for observational errors in laboratory studies. *Molecular Ecology Resources* **18**:580–589. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Brost_et_al_MER_2018.pdf){target="_blank"} </li>
+    preprint_raw  = map_chr(entry, ~ { v <- .x$preprint;  if (is.null(v) || length(v)==0) NA_character_ else as.character(v[[1]]) }),
+    materials_raw = map_chr(entry, ~ { v <- .x$materials; if (is.null(v) || length(v)==0) NA_character_ else as.character(v[[1]]) }),
 
-<li> Davenport, K.A., B.A. Mosher, B.M. Brost, D.M. Henderson, N.A. Denkers, A.V. Nalls, E. McNulty, C.K. Mathiason, and E.A. Hoover. 2018. Assessment of chronic wasting disease prion shedding in deer saliva with occupancy modeling. *Journal of Clinical Microbiology* **56**:e01243–17. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Davenport_et_al_JCM_2018.pdf){target="_blank"} </li>
+    has_preprint_key  = map_lgl(entry, ~ !is.null(.x$preprint)  && length(.x$preprint)  > 0),
+    has_materials_key = map_lgl(entry, ~ !is.null(.x$materials) && length(.x$materials) > 0)
+  ) |>
+  left_join(extra_links, by = "key") |>
+  mutate(
+    preprint_val  = coalesce(preprint,  preprint_raw),
+    materials_val = coalesce(materials, materials_raw)
+  ) |>
+  select(-any_of(c("preprint", "materials"))) |>
+  mutate(
+    preprint_url  = normalize_link(preprint_val),
+    materials_url = normalize_link(materials_val)
+  ) |>
+  mutate(
+    doi_url = normalize_link(
+      if_else(
+        nzchar(doi %||% ""),
+        str_glue("https://doi.org/{doi}"),
+        if_else(nzchar(preprint_url %||% ""), preprint_url, url_fallback)
+      )
+    ),
+    year_num = suppressWarnings(as.integer(str_extract(year, "\\d{4}"))),
+    year_lbl = ifelse(is.na(year_num), "n.d.", as.character(year_num))
+  ) |>
+  mutate(
+    primary = map_lgl(entry, ~ tolower(as.character(.x$primary %||% "false")) == "true")
+  ) |>
+  arrange(desc(year_num), title)
+```
 
-<li> Brost, B.M., M.B. Hooten, and R.J. Small. 2017. Leveraging constraints and biotelemetry data to pinpoint repetitively used spatial features. *Ecology* **98**:12–20. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Brost_et_al_Ecology_2017.pdf){target="_blank"} </li>
+```{css}
+/* Group header */
+.year-group { margin: 28px 0 8px; }
+.year-title { margin: 0; font-size: 1.35rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 2px; }
 
-<li> Hefley, T.J., K.M. Broms, B.M. Brost, F.E. Buderman, S.L. Kay, H.R. Scharf, J.R. Tipton, P.J. Williams, and M.B. Hooten. 2017. The basis function approach for modeling autocorrelation in ecological data. *Ecology* **98**:632–646. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Hefley_et_al_Ecology_2017.pdf){target="_blank"} </li>
+/* Card + layout */
+.pub-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px 16px 10px 16px;
+  margin: 14px 0;
+  background: #fff;
+}
+.pub-title { font-family: Patrona; font-weight: 600; font-size: 1.05rem; margin-bottom: 4px; }
+.pub-title a { text-decoration: none; }
+.pub-meta  { color: #555; font-size: 0.95rem; margin-bottom: 8px; }
 
-<li> Hefley, T.J., B.M. Brost, and M.B. Hooten. 2017. Bias correction of bounded location errors in presence-only data. *Methods in Ecology and Evolution* **8**:1566–1573. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Hefley_et_al_MEE_2017.pdf){target="_blank"} </li>
+/* Actions row */
+.pub-actions {
+  display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center;
+  margin-top: 8px; margin-bottom: 8px;
+}
+.pub-actions a {
+  text-decoration: none; font-size: 0.92rem;
+  border-bottom: 1px dotted #999; color: #0b66c3; cursor: pointer;
+}
+.pub-actions a.external { border-bottom-style: solid; }
 
-<li> Small, R.J., B. Brost, M. Hooten, M. Castellote, and J. Mondragon. 2017. Potential for spatial displacement of Cook Inlet beluga whales by anthropogenic noise in critical habitat. *Endangered Species Research* **32**:43–57. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Small_et_al_ESR_2017.pdf){target="_blank"} </li>
+/* Toggle area */
+.toggle-area {
+  display: none; position: relative;
+  border: 1px solid #000; border-radius: 10px;
+  padding: 12px 44px 12px 12px; background: #fafafa;
+  margin-top: 10px; overflow: auto;
+}
+.toggle-area .panel-label {
+  font-size: 0.82rem; color: #333; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  opacity: 0.85; margin-bottom: 6px;
+}
+.toggle-area pre { white-space: pre-wrap; word-wrap: break-word; margin: 0; }
+.toggle-area .content p { margin: 0 0 0.6em 0; }
 
-<li> Hooten, M.B., F.E. Buderman, B.M. Brost, E.M. Hanks, and J.S. Ivan. 2016. Hierarchical animal movement models for population-level inference. *Environmetrics* **27**:322–333. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Hooten_et_al_Environmetrics_2016.pdf){target="_blank"} </li>
+/* Copy button */
+.copy-btn {
+  position: absolute; top: 6px; right: 6px;
+  border: 1px solid #ddd; background: #fff; font-size: 0.85rem;
+  padding: 4px 8px; border-radius: 6px; cursor: pointer;
+}
+.copy-btn:active { transform: translateY(1px); }
+.copy-toast {
+  position: absolute; top: 6px; right: 70px; font-size: 0.8rem;
+  background: #333; color: #fff; padding: 3px 7px; border-radius: 6px; display: none;
+}
 
-<li> Brost, B.M., M.B. Hooten, E.M. Hanks, and R.J. Small. 2015. Animal movement constraints improve resource selection inference in the presence of telemetry error. *Ecology* **96**:2590–2597. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Brost_et_al_Ecology_2015.pdf){target="_blank"} </li>
+/* Lab-led star on Abstract link */
+.pub-actions .lab-star {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #ffb300;
+  user-select: none;
+}
+.pub-actions .lab-star[role="img"] {
+  cursor: default;
+}
+.pub-actions .lab-star .sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+```
 
-<li> Brost, B.M., and P. Beier. 2012. Comparing linkage designs based on land facets to linkage designs based on focal species. *PLoS One* **7**:e48965. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Brost_Beier_PONE_2012.pdf) </li>
+```{=html}
+<script>
+(function() {
+  function getCard(el) {
+    while (el && !el.classList?.contains('pub-card')) el = el.parentNode;
+    return el;
+  }
+  function showPanel(card, label, html, mode) {
+    const area = card.querySelector('.toggle-area');
+    const labelEl = area.querySelector('.panel-label');
+    const contentEl = area.querySelector('.content');
 
-<li> Brost, B.M., and P. Beier. 2012. Use of land facets to design linkages for climate change. *Ecological Applications* **22**:87–103. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Brost_Beier_EcolApps_2012.pdf){target="_blank"} </li>
+    // Toggle: if clicking same action while open, collapse
+    const current = area.getAttribute('data-current');
+    if (current === mode && area.style.display === 'block') {
+      area.style.display = 'none';
+      area.setAttribute('data-current', '');
+      return;
+    }
 
-<li> Beier, P., and B. Brost. 2010. Use of land facets to plan for climate change: Conserving the arenas, not the actors. *Conservation Biology* **24**:701–710. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Beier_Brost_ConsBio_2010.pdf){target="_blank"} </li>
+    labelEl.textContent = label;
+    if (mode === 'bib') {
+      contentEl.innerHTML = '';
+      const pre = document.createElement('pre');
+      pre.textContent = html;
+      contentEl.appendChild(pre);
+    } else if (mode === 'abstract') {
+      contentEl.textContent = html;
+    } else {
+      contentEl.innerHTML = html; // citation HTML
+    }
+    area.style.display = 'block';
+    area.setAttribute('data-current', mode);
+  }
 
-#### Book chapters and white papers
-<hr>
+  // Resource link handler (toggle)
+  document.addEventListener('click', function(evt) {
+    const a = evt.target.closest('a[data-action]');
+    if (!a) return;
+    const action = a.getAttribute('data-action');
+    const card   = getCard(a);
+    if (!card) return;
+    evt.preventDefault();
 
-<li> McMaster, M.A., A. Thode, B. Brost, M. Williamson, E. Aumack, D. Mertz. 2010. Changes in vegetation and fuels due to the Warm Fire on the Kaibab National Forest. *Joint Fire Science Program Research Project Reports* 34. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/McMaster_et_al_JFSP_2010.pdf){target="_blank"} </li>
+    if (action === 'abstract' || action === 'citation' || action === 'bib') {
+      const key = card.getAttribute('data-key');  // <-- Pandoc ref id suffix
 
-<li> Wydeven, A.P., A. Treves, B. Brost, and J.E. Wiedenhoeft. 2004. Characteristics of wolf packs in Wisconsin: Identification of traits influencing depredation. In *People and Predators: From Conflict to Coexistence,* eds. N. Fascione, A. Delach, and M. E. Smith. Island Press, Washington, D.C. [{{<fa regular file-pdf title="PDF">}}](https://bmbrost.github.io/publications/pdf/Wydeven_et_al_preprint_2004.pdf){target="_blank"} </li>
+      // Build label + payload
+      let label = action === 'citation' ? 'Citation' : (action === 'bib' ? 'BibTeX' : 'Abstract');
+      let html  = '';
 
-</ol>
+      if (action === 'abstract') {
+        const payloadEl = card.querySelector('.payload-abstract');
+        const text = (payloadEl?.textContent || 'No abstract available.').trim();
+        showPanel(card, label, text, 'abstract');
+        return;
+      }
 
-</div>
+      if (action === 'citation') {
+        // Pull APA-formatted HTML from hidden #refs list: <div id="ref-KEY">
+        const ref = document.querySelector('#ref-' + key);
+        html = (ref ? ref.innerHTML : 'Citation unavailable.').trim();
+        showPanel(card, label, html, 'citation');
+        return;
+      }
 
-<!-- Add footer -->
-<!-- See: https://quarto.org/docs/authoring/article-layout.html#overflowing-content -->
-::: {.column-page}
-<footer class="footer-main"> 
-Brian M. Brost &copy; 2025 
-</footer>
-:::
+      if (action === 'bib') {
+        const payloadEl = card.querySelector('.payload-bibtex');
+        const text = (payloadEl?.textContent || 'No BibTeX available.').trim();
+        showPanel(card, label, text, 'bib');
+        return;
+      }
+    }
+  }, false);
+
+  // Copy button
+  document.addEventListener('click', function(evt) {
+    const btn = evt.target.closest('.copy-btn');
+    if (!btn) return;
+    const card = getCard(btn);
+    const area = card.querySelector('.toggle-area');
+    const contentEl = area.querySelector('.content');
+
+    let textToCopy = '';
+    const pre = contentEl.querySelector('pre');
+    if (pre) textToCopy = pre.textContent;
+    else textToCopy = contentEl.innerText;
+
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      const toast = area.querySelector('.copy-toast');
+      toast.style.display = 'inline-block';
+      setTimeout(() => { toast.style.display = 'none'; }, 1200);
+    }).catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = textToCopy;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+    });
+  }, false);
+})();
+</script>
+```
+
+```{r}
+#| label: render-publications
+
+build_card <- function(
+  key, entry, title, authors_card, year, venue,
+  abstract, bibtex,
+  preprint_url = NA_character_, materials_url = NA_character_,
+  doi_url = NA_character_, primary = FALSE, ...
+) {
+  has_preprint_key  <- !is.null(entry$preprint)  && length(entry$preprint)  > 0
+  has_materials_key <- !is.null(entry$materials) && length(entry$materials) > 0
+
+  payloads <- tags$div(
+    style = "display:none;",
+    tags$div(class = "payload-abstract", abstract %||% ""),
+    tags$div(class = "payload-bibtex",  bibtex   %||% "")
+  )
+
+  ttl_node <- if (isTRUE(nzchar(doi_url %||% ""))) {
+    tags$div(class = "pub-title", tags$a(title, href = doi_url, target = "_blank", rel = "noopener"))
+  } else {
+    tags$div(class = "pub-title", title)
+  }
+
+  meta <- tags$div(
+    class = "pub-meta",
+    if (nzchar(authors_card %||% "")) {
+      tagList(HTML(authors_card), tags$br())
+    } else {
+      NULL
+    },
+    tagList(if (nzchar(venue %||% "")) tags$em(venue) else NULL)
+  )
+
+  actions <- tags$div(
+    class = "pub-actions",
+    # Standalone star badge (only if primary)
+    if (isTRUE(primary)) tags$span(
+      class = "lab-star",
+      role  = "img",
+      title = "This project was led by the AffCom lab",
+      `aria-label` = "This project was led by the AffCom lab",
+      "★",
+      tags$span(class = "sr-only", " This project was led by the AffCom lab")
+    ),
+    # Action links
+    tags$a("Abstract", href = "#", `data-action`="abstract", role="button"),
+    tags$a("Citation", href = "#", `data-action`="citation", role="button"),
+    tags$a("BibTeX",   href = "#", `data-action`="bib",      role="button"),
+    if (isTRUE(has_preprint_key))
+      tags$a("PDF", class = "external", href = (preprint_url %||% "#"), target = "_blank", rel="noopener"),
+    if (isTRUE(has_materials_key))
+      tags$a("Materials", class = "external", href = (materials_url %||% "#"), target = "_blank", rel="noopener")
+  )
+
+  toggle_panel <- tags$div( 
+    class = "toggle-area",
+    `data-current` = "",
+    tags$button(class = "copy-btn", "Copy"),
+    tags$span(class = "copy-toast", "Copied!"),
+    tags$div(class = "panel-label", "—"),
+    tags$div(class = "content")
+  )
+
+  tags$div(class = "pub-card", `data-key` = key, ttl_node, meta, actions, toggle_panel, payloads)
+}
+
+years <- rows |>
+  distinct(year_lbl, year_num) |>
+  arrange(desc(year_num), desc(year_lbl)) |>
+  pull(year_lbl)
+
+groups <- lapply(years, function(y) {
+  subset <- rows |> filter(year_lbl == y)
+
+  subset_min <- subset |>
+    select(
+      key, entry, title, authors_card, year, venue,
+      abstract, bibtex,
+      preprint_url, materials_url, doi_url, primary
+    )
+  cards <- pmap(subset_min, build_card)
+
+  tags$div(
+    class = "year-group",
+    tags$h2(class = "year-title anchored", id = paste0("y-", y), y),
+    tags$div(cards)
+  )
+})
+
+browsable(tags$div(groups))
+```

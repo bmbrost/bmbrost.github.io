@@ -21,6 +21,7 @@ website:
         text: CV
       - href: showcase/index.qmd
         text: Showcase
+      # - href: publications/index_old.qmd
       - href: publications/index.qmd
         text: Publications
       # - href: pubs_sc/index.qmd
