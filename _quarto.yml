@@ -23,7 +23,7 @@ website:
         text: Showcase
       # - href: publications/index_old.qmd
       - href: publications/index.qmd
-        text: Publications
+        text: Publications 
       # - href: pubs_sc/index.qmd
       #   text: Publications Listing
       # - href: pubs_al/index.qmd
