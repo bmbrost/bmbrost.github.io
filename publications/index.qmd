@@ -2,7 +2,8 @@
 pagetitle: "Publications"
 toc: false
 bibliography: publications.bib
-csl: apa.csl
+# csl: apa.csl
+csl: ecology.csl
 nocite: | 
   @*
 execute: 
