@@ -11,7 +11,7 @@ execute:
   warning: false
   message: false
 ---
-                       
+                        
 <!-- ```{=html} -->
 <!-- <nav aria-label="breadcrumb"> -->
 <!--   <ol class="breadcrumb"> -->
@@ -160,11 +160,11 @@ rows <- tibble(
   ) |>
   arrange(desc(year_num), title)
 ```
-
+ 
 ```{css}
 /* Group header */
 .year-group { margin: 28px 0 8px; }
-.year-title { margin: 0; font-size: 1.35rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 2px; }
+.year-title { margin: 0; font-size: 1.05rem; font-weight:500; font-color: #002642; border-bottom: 1px solid #e5e7eb; padding-bottom: 2px; }
 
 /* Card + layout */
 .pub-card {
@@ -361,7 +361,8 @@ build_card <- function(
   )
 
   ttl_node <- if (isTRUE(nzchar(doi_url %||% ""))) {
-    tags$div(class = "pub-title", tags$a(title, href = doi_url, target = "_blank", rel = "noopener"))
+    tags$div(class = "pub-title", title)  # don't add hyperlink to title
+    # tags$div(class = "pub-title", tags$a(title, href = doi_url, target = "_blank", rel = "noopener"))  # add hyperlink to title
   } else {
     tags$div(class = "pub-title", title)
   }
@@ -391,12 +392,14 @@ build_card <- function(
     tags$a("Abstract", href = "#", `data-action`="abstract", role="button"),
     tags$a("Citation", href = "#", `data-action`="citation", role="button"),
     tags$a("BibTeX",   href = "#", `data-action`="bib",      role="button"),
+    if (isTRUE(nzchar(doi_url %||% "")))  # add URL to bottom of card
+      tags$a("URL",class="external",href=doi_url,target="_blank",rel="noopener"),
     if (isTRUE(has_preprint_key))
       tags$a("PDF", class = "external", href = (preprint_url %||% "#"), target = "_blank", rel="noopener"),
     if (isTRUE(has_materials_key))
       tags$a("Materials", class = "external", href = (materials_url %||% "#"), target = "_blank", rel="noopener")
-  )
-
+  ) 
+ 
   toggle_panel <- tags$div( 
     class = "toggle-area",
     `data-current` = "",

@@ -17,9 +17,9 @@ format:
 # Hi.
 
 <br>
-I'm Brian. I work at the intersection of statistics, geospatial analysis, and conservation science. I have more than 15 years of experience finding the signal in a noisy world. I turn complex (and often messy) data into discovery through the application of advanced analytical techniques. In particular, I specialize in *boutique* Bayesian hierarchical models that account for common nuances such as measurement error, imperfect detection (i.e., false positives and negatives), and spatio-temporal dependence. I also enjoy conveying stories through high-quality graphics and cartographic design. 
+I'm Brian. I work at the intersection of statistics, geospatial analysis, and conservation science. I have more than 15 years of experience finding the signal in a noisy world. I turn complex (and often messy) data into discovery using advanced analytical techniques. In particular, I specialize in the development and application of *boutique*  Bayesian hierarchical models that account for nuances like measurement error, imperfect detection (i.e., false positives and negatives), and spatio-temporal dependence. I also enjoy conveying stories through high-quality graphics and cartographic design. 
 
-I'm motivated by challenging problems and a desire to leave the world a little better than I found it. Please send me a <a href="mailto:bmbrost@gmail.com" style="color:black; text-decoration: underline;" title="Send an email">message</a> if you'd like to work together.
+I'm motivated by challenging problems and a desire to leave the world a little better than I found it. Please send me a <a href="mailto:bmbrost@gmail.com" style="color:#0b66c3; text-decoration: underline" title="Send an email">message</a> if you'd like to work together.
 
 
 When not at my desk, I enjoy cooking (and baking), reading (usually non-fiction), an occasional cocktail (or two), tinkering (in the garage), and finding solitude in wild places (preferably on foot, bicycle, or in a packraft).

@@ -20,10 +20,13 @@ $burnt-orange: #a23e02;
 // Base document colors
 // $navbar-bg: $light-gray; // navbar
 // $navbar-fg: black; // navbar foreground elements
-$navbar-hl: dodgerblue; // highlight color when hovering over navbar links
+// $navbar-hl: dodgerblue; // highlight color when hovering over navbar links
+$navbar-hl: #0b66c3; // highlight color when hovering over navbar links
+
 // $body-color: $gray; // page text 
 // $footer-bg: $cream; // footer 
-$link-color: dodgerblue; // hyperlinks 
+// $link-color: dodgerblue; // hyperlinks 
+$link-color: #0b66c3; // hyperlinks 
 
 // Styling like https://silviacanelon.com
 // $body-bg: $cream; // page background 
@@ -111,7 +114,9 @@ a {
 .navbar-nav .nav-link.active{
   text-decoration: underline;
   // text-decoration-color: black;
-  color: dodgerblue;
+  // color: dodgerblue;
+  // color: #0000FFBF;
+  color: #0b66c3;
 }
 
 // customize footer
