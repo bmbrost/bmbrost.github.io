@@ -361,7 +361,7 @@ build_card <- function(
   )
 
   ttl_node <- if (isTRUE(nzchar(doi_url %||% ""))) {
-    tags$div(class = "pub-title", title)  # don't add hyperlink to title
+    tags$div(class = "pub-title", title)  # plain title, no hyperlink
     # tags$div(class = "pub-title", tags$a(title, href = doi_url, target = "_blank", rel = "noopener"))  # add hyperlink to title
   } else {
     tags$div(class = "pub-title", title)

@@ -7,20 +7,6 @@
     "text": "Coming soon…\n \n\n\n\n\nBrian M. Brost © 2025"
   },
   {
-    "objectID": "pubs_sc/2010_Beier_Brost_ConsBio/index.html",
-    "href": "pubs_sc/2010_Beier_Brost_ConsBio/index.html",
-    "title": "Use of Land Facets to Plan for Climate Change: Conserving the Arenas, Not the Actors",
-    "section": "",
-    "text": "Download PDF:"
-  },
-  {
-    "objectID": "pubs_sc/2010_Beier_Brost_ConsBio/index.html#abstract",
-    "href": "pubs_sc/2010_Beier_Brost_ConsBio/index.html#abstract",
-    "title": "Use of Land Facets to Plan for Climate Change: Conserving the Arenas, Not the Actors",
-    "section": "Abstract",
-    "text": "Abstract\nEven under the most optimistic scenarios, during the next century human-caused climate change will threaten many wild populations and species. The most useful conservation response is to enlarge and link protected areas to support range shifts by plants and animals. To prioritize land for reserves and linkages, some scientists attempt to chain together four highly uncertain models (emission scenarios, global air–ocean circulation, regional circulation, and biotic response). This approach has high risk of error propagation and compounding and produces outputs at a coarser scale than conservation decisions. Instead, we advocate identifying land facets—recurring landscape units with uniform topographic and soil attributes—and designing reserves and linkages for diversity and interspersion of these units. This coarse-filter approach would conserve the arenas of biological activity, rather than the temporary occupants of those arenas. Integrative, context-sensitive variables, such as insolation and topographic wetness, are useful for defining land facets. Classification procedures such as k-means or fuzzy clustering are a good way to define land facets because they can analyze millions of pixels and are insensitive to case order. In regions lacking useful soil maps, river systems or riparian plants can indicate important facets. Conservation planners should set higher representation targets for rare and distinctive facets. High interspersion of land facets can promote ecological processes, evolutionary interaction, and range shift. Relevant studies suggest land-facet diversity is a good surrogate for today’s biodiversity, but fails to conserve some species. To minimize such failures, a reserve design based on land facets should complement, rather than replace, other approaches. Designs based on land facets are not biased toward data-rich areas and can be applied where no maps of land cover exist."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Brian M. Brost",
@@ -47,13 +33,6 @@
     "title": "Hi.",
     "section": "",
     "text": "Hi.\n I’m Brian. I work at the intersection of statistics, geospatial analysis, and conservation science. I have more than 15 years of experience finding the signal in a noisy world. I turn complex (and often messy) data into discovery using advanced analytical techniques. In particular, I specialize in the development and application of boutique Bayesian hierarchical models that account for nuances like measurement error, imperfect detection (i.e., false positives and negatives), and spatio-temporal dependence. I also enjoy conveying stories through high-quality graphics and cartographic design.\nI’m motivated by challenging problems and a desire to leave the world a little better than I found it. Please send me a message if you’d like to work together.\nWhen not at my desk, I enjoy cooking (and baking), reading (usually non-fiction), an occasional cocktail (or two), tinkering (in the garage), and finding solitude in wild places (preferably on foot, bicycle, or in a packraft).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBrian M. Brost © 2025"
-  },
-  {
-    "objectID": "pubs_sc/index.html",
-    "href": "pubs_sc/index.html",
-    "title": "Publications",
-    "section": "",
-    "text": "Use of Land Facets to Plan for Climate Change: Conserving the Arenas, Not the Actors\n\n\n\n\n\nApr 14, 2025\n\n\nPaul Beier, Brian Brost\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "cv/index.html",
