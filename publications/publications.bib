@@ -1,3 +1,110 @@
+Sterling, J.T., and B.M. Brost. Summer resource limitation as a likely mechanism impacting northern fur seal (Callorhinus ursinus) recovery.
+
+In prep.
+
+Brost, B.M, and N. Young. Hierarchical models improve inference concerning marine mammal mortalities incidental to commercial fishing activities.
+
+In review
+
+Zeppelin, T.K., B.M. Brost, D.S. Johnson, C.M. Kurle, B.A. Güell, C. Keller, M.T. Williams, and A.E. York. Determining cryptic life history milestones using isotopic markers in northern fur seal (Callorhinus ursinus) vibrissae.
+
+@article{Conn_et_al_MEE_2022,
+  author = {Paul B. Conn and Jay M. Ver Hoef and Brett T. McClintock and Devin S. Johnson and Brian Brost},
+	title = {A GLMM approach for combining multiple relative abundance surfaces},
+	journal = {Methods in Ecology and Evolution},
+	year = {2022},
+	volume = {13},
+	pages = {2236-2247},
+	doi = {10.1111/2041-210X.13948},
+	abstract = {(1) Spatio-temporal maps of organismal density or relative abundance are fundamental to many applications in conservation and ecology. There are often a number of data sources to inform species maps, including citizen science monitoring programs, remote sensing, geolocation data from satellite-tagged animals and formal scientific surveys. In these cases, it may be desirable to come up with a single map integrating all data sources. (2) We introduce a novel two-step method for combining inference about relative abundance maps using multiple data sources. Log-scale relative abundance surfaces are first estimated from individual data sets, and resultant surfaces are then treated as `data' within a generalized linear mixed model framework with a spatially autocorrelated mean process. We also introduce generalizations allowing data misalignment and predictive processes to decrease computational burden. (3) Using simulation, we show that our approach frequently outperfoms other approaches, including basing inference on a single surface, or taking a simple arithmetic mean (although the arithmetic mean performs well when there are few surfaces). We then demonstrate our method using citizen science and satellite-tracking data of Steller sea lions in Alaska. In this case, relative abundance surfaces consisted of an effort-adjusted map developed from platform-of-opportunity sightings and a utilization distribution developed from geolocation records. The resulting combined surface represented a compromise between single-data source predictions. (4) Our approach should be useful for ecologists seeking to reconcile alternative species distribution maps, particularly when individual surfaces are prone to bias, when there is no obvious common currency (e.g. point process), or when computational demands preclude a fully integrated analysis.},
+	keywords = {density surface model, Eumetopias jubatus, resource selection function, spatial autocorrelation, species distribution model, Steller sea lion, telemetry},
+	url = {https://doi.org/10.1111/2041-210X.13948},
+	preprint = {pdf/Conn_et_al_MEE_2022.pdf},
+	materials = {},
+	primary = {}}
+
+@article{Johnson_et_al_JABES_2022,
+	author = {Devin S. Johnson and Brian M. Brost and Mevin B. Hooten},
+	title = {Greater than the sum of its parts: Computationally flexible Bayesian hierarchical modeling},
+	journal = {Journal of Agricultural, Biological, and Environmental Statistics},
+	year = {2022},
+	volume = {27},
+	number = {2},
+	pages = {382-400},
+	doi = {10.1007/s13253-021-00485-9},
+	abstract = {We propose a multistage method for making inference at all levels of a Bayesian hierarchical model (BHM) using natural data partitions to increase efficiency by allowing computations to take place in parallel form using software that is most appropriate for each data partition. The full hierarchical model is then approximated by the product of independent normal distributions for the data component of the model. In the second stage, the Bayesian maximum a posteriori (MAP) estimator is found by maximizing the approximated posterior density with respect to the parameters. If the parameters of the model can be represented as normally distributed random effects, then the second-stage optimization is equivalent to fitting a multivariate normal linear mixed model. We consider a third stage that updates the estimates of distinct parameters for each data partition based on the results of the second stage. The method is demonstrated with two ecological data sets and models, a generalized linear mixed effects model (GLMM) and an integrated population model (IPM). The multistage results were compared to estimates from models fit in single stages to the entire data set. In both cases, multistage results were very similar to a full MCMC analysis. Supplementary materials accompanying this paper appear online.},
+	keywords = {Approximation; Bayesian MAP estimation; Bayesian hierarchical model; Integrated population model; linear mixed model; meta-analysis; multistage estimation},
+	url = {https://doi.org/10.1007/s13253-021-00485-9},
+	preprint = {Johnson_et_al_JABES_2022.pdf},
+	materials = {},
+	primary = {false}}
+
+
+@article{Hooten_et_al_AmStat_2021,
+	author = {Hooten, Mevin B. and Johnson, Devin S. and Brost, Brian M.},
+	title = {Making recursive Bayesian inference accessible},
+	journal = {The American Statistician},
+	year = {2021},
+	volume = {75},
+	number = {2},
+	pages = {85--194},
+	doi = {10.1080/00031305.2019.1665584},
+	abstract = {Bayesian models provide recursive inference naturally because they can formally reconcile new data and existing scientific information. However, popular use of Bayesian methods often avoids priors that are based on exact posterior distributions resulting from former studies. Two existing Recursive Bayesian methods are: Prior- and Proposal-Recursive Bayes. Prior-Recursive Bayes uses Bayesian updating, fitting models to partitions of data sequentially, and provides a way to accommodate new data as they become available using the posterior from the previous stage as the prior in the new stage based on the latest data. Proposal-Recursive Bayes is intended for use with hierarchical Bayesian models and uses a set of transient priors in first stage independent analyses of the data partitions. The second stage of Proposal-Recursive Bayes uses the posteriors from the first stage as proposals in a Markov chain Monte Carlo algorithm to fit the full model. We combine Prior- and Proposal-Recursive concepts to fit any Bayesian model, and often with computational improvements. We demonstrate our method with two case studies. Our approach has implications for big data, streaming data, and optimal adaptive design situations.},
+	keywords = {Filtering; hierarchical model; iterative forecasting; Markov chain Monte Carlo; parallel processing; sequential inference},
+	url = {https://doi.org/10.1080/00031305.2019.1665584},
+	preprint = {pdf/Hooten_et_al_AmStat_2021.pdf},
+	materials = {},
+	primary = {false}}
+
+
+@article{Brost_et_al_Ecosphere_2020,
+	author = {Brost, Brian M. and Hooten, Mevin B. and Small, Robert J.},
+	title = {Model-based clustering reveals patterns in central place use of a marine top predator},
+	journal = {Ecosphere},
+	year = {2020},
+	volume = {11},
+	number = {6},
+	pages = {e03123},
+	doi = {10.1002/ecs2.3123},
+	abstract = {Satellite telemetry data are commonly used to quantify habitat selection, examine animal movements, and delineate home ranges. These data also contain valuable information concerning dens, nests, roosts, and other central places that are often associated with important life history events and may exhibit unique characteristics; however, using satellite telemetry data to study central places is complicated by common nuances like locational error and animal movement. We coupled a novel modeling framework that accounts for these nuances with an Argos satellite telemetry dataset to examine the spatiotemporal behavior associated with harbor seal haul-out sites on Kodiak Island, Alaska, USA. The methodology incorporates an observation model that accommodates multiple sources of uncertainty in telemetry data and a flexible Bayesian nonparametric model to uncover latent clustering in the telemetry locations. We also contribute extensions to examine the effect of covariates on site selection and to obtain population-level inference concerning central place use. Harbor seal haul-out sites generally occurred in inlets and bays, areas that are isolated from the open water of the Gulf of Alaska. Most individuals selected haul-out sites that were protected from wave exposure. The effects of bathymetry and shoreline complexity on haul-out site selection were variable among individual seals, as were the effects of time of day, time since low tide, and day of year on temporal patterns of haul-out use. As repositories of satellite telemetry data on a wide variety of species accumulate, so do opportunities for using this information to learn about the locations of central places, as well as the temporal patterns in their use. The model-based approach we describe offers a practical and rigorous means for gaining insight concerning these sensitive locations, knowledge of which is important for the effective management and conservation of many species.},
+	keywords = {Bayesian analysis; Dirichlet process; harbor seal; haul-out; hierarchical model; mixture model; nonparametric},
+	url = {https://doi.org/10.1002/ecs2.3123},
+	preprint = {pdf/Brost_et_al_Ecosphere_2020.pdf},
+	materials = {},
+	primary = {false}}
+
+@article{Fritz_et_al_CJZ_2019,
+	author = {Fritz, Lowell and Brost, Brian and Laman, E. and Luxa, Katie and Sweeney, Katie and Thomason, Jim and Tollit, D. and Walker, William and Zeppelin, Tonya},
+  title = {A re-examination of the relationship between Steller sea lion (Eumetopias jubatus) diet and population trend using data from the Aleutian Islands},
+	journal = {Canadian Journal of Zoology},
+	year = {2019},
+	volume = {97},
+	number = {12},
+	pages = {1137--1155},
+	doi = {10.1139/cjz-2018-0329},
+	abstract = {Prey diversity and energy density have been linked to each other and to population trends in many studies of bird and mammal diets. We re-examined these relationships in Steller sea lions (Eumetopias jubatus (Schreber, 1776)) using data collected from the Aleutian Islands, where there has been a strong longitudinal gradient in population trend. Diet diversity and energy density metrics were similar in the western Aleutians, where sea lion counts declined consistently, and in the easternmost Aleutian area, where population trends improved significantly. We compared traditional deterministic diet diversity metrics with diversity scores based on an occupancy model that accounts for differences in sample size and uncertainty in prey group detection. This analysis indicated that there was no significant change in diet diversity over the 23-year study period or any significant differences across the Aleutian Islands. These results are consistent with prey abundance data from nine groundfish bottom trawl surveys conducted over the same period. While diet studies detail what Steller sea lions eat and provide an estimate of their energy intake, they provide only limited information on the energy expended to obtain their food or the consequences of their diet and foraging ecology on individual or population fitness.},
+	keywordws = {},
+	url = { https://doi.org/10.1139/cjz-2018-0329},
+	preprint = {pdf/Fritz_et_al_CJZ_2019.pdf},
+	materials = {},
+	primary = {false}}
+
+
+@article{Zeppelin_et_al_SciReports_2019,
+	author = {Zeppelin, Tonya and Pelland, Noel and Sterling, Jeremy and Brost, Brian and Melin, Sharon and Johnson, Devin and Lea, Mary-Anne and Ream, Rolf},
+	title = {Migratory strategies of juvenile northern fur seals (Callorhinus ursinus): bridging the gap between pups and adults},
+  journal = {Scientific Reports},
+	year = {2019},
+  volume = {9},
+	number = {1},
+	pages = {13921},
+	doi = {10.1038/s41598-019-50230-z},
+  abstract = {In species exhibiting differential migration by sex and age, understanding what differences exist, and the adaptive reasons for these differences is critical for determining how demographic groups will respond to environmental variability and anthropogenic perturbations. We used satellite-telemetered movement and diving data to investigate differential migration and its ontogeny in a highly migratory North Pacific Ocean predator, the northern fur seal (Callorhinus ursinus; NFS), with a focus on understudied juvenile (1- to 2-year-old) animals. We instrumented 71 juvenile NFS in two years (2006--07 and 2007--08) at three major North American breeding sites and compared their migratory strategies with pups and adults. Although sexual dimorphism is strong in adult NFS, only weak differences in body mass between sexes were found in juveniles, which had similar body mass to pups (~3--4 months). However, unlike widely-dispersed pups, juvenile male and female NFS dispersed in different directions, and used different habitats characterized by distinct hydrography and prey assemblages during migration, similar to breeding adults. Juvenile diving behavior differed only modestly among habitats and between sexes, consistent with weak differences in body mass. Evidence of habitat sexual segregation by juvenile NFS contradicts previous hypotheses that physiological differences predominantly drive the ontogeny of differential migration.},
+	keywords = {},
+	url = {https://doi.org/10.1038/s41598-019-50230-z},
+	preprint = {pdf/Zeppelin_et_al_SciReports_2019.pdf},
+	materials = {},
+	primary = {false}}
 
 @article{Brost_et_al_MER_2018,
 	author = {Brost, Brian M. and Mosher, Brittany A. and Davenport, Kristen A.},
