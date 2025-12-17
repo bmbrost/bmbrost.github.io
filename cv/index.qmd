@@ -15,7 +15,7 @@ format:
       gutter-width: 2rem
   
 ---
-
+ 
 <!-- Examples for inspiration: -->
 <!-- https://allisonhorst.github.io/cv.html -->
 
