@@ -22,7 +22,7 @@ format:
 <!-- PDF/HTML format options in right margin -->
 ::: column-margin
 <br> Other Formats:
- 
+
 &nbsp;&nbsp;&nbsp;&nbsp;{{<fa regular file-pdf title="PDF">}}&nbsp;&nbsp; [PDF](/cv/brost_cv.pdf){target="_blank"}
  
 &nbsp;&nbsp;&nbsp;&nbsp;{{<fa regular file-code title="HTML">}} &nbsp;&nbsp; [HTML](/cv/brost_cv.html){target="_blank"}

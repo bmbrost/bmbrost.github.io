@@ -11,7 +11,7 @@ execute:
   warning: false
   message: false
 ---
-                        
+
 <!-- ```{=html} -->
 <!-- <nav aria-label="breadcrumb"> -->
 <!--   <ol class="breadcrumb"> -->
@@ -26,7 +26,6 @@ execute:
  
 <!-- This page lists all papers published by Dr. Girard, organized by year of publication. Click a paper’s *title* to visit the publisher page and access the official version. Use *Abstract* to reveal the summary, *Citation* for the APA 7th-edition reference, and *BibTeX* to view the BibTeX entry. Clicking the link a second time will close the display again. *Preprint* links to a free author version (not the final typeset copy), and *Materials* leads to an open repository with data, code, and other open-science resources. <span style="font-size:0.9rem; opacity:0.8; margin-bottom:0.5rem;">★ = Work led or co-led by our lab (established in 2020)</span> -->
   
- 
 ```{r setup}
 library(tidyverse)
 library(RefManageR)
@@ -164,7 +163,7 @@ rows <- tibble(
 ```{css}
 /* Group header */
 .year-group { margin: 28px 0 8px; }
-.year-title { margin: 0; font-size: 1.05rem; font-weight:500; font-color: #002642; border-bottom: 1px solid #e5e7eb; padding-bottom: 2px; }
+.year-title { margin: 0; font-size: 1.05rem; font-weight:400; font-color: #002642; border-bottom: 1px solid #e5e7eb; padding-bottom: 2px; }
 
 /* Card + layout */
 .pub-card {
@@ -174,7 +173,7 @@ rows <- tibble(
   margin: 14px 0;
   background: #fff;
 }
-.pub-title { font-family: Patrona; font-weight: 600; font-size: 1.05rem; margin-bottom: 4px; }
+.pub-title { font-family: Petrona; font-color: #002642; font-weight: 600; font-size: 1.05rem; margin-bottom: 4px; }
 .pub-title a { text-decoration: none; }
 .pub-meta  { color: #555; font-size: 0.95rem; margin-bottom: 8px; }
 
