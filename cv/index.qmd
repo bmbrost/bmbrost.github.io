@@ -7,8 +7,6 @@ format:
   html:
     page-layout: full
     grid:
-      # margin-width: 300px
-      # gutter-width: 0.5em
       sidebar-width: 250px
       body-width: 750px
       margin-width: 300px
