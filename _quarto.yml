@@ -6,7 +6,7 @@ website:
   google-analytics: "G-GMY5LHEEJL"
   # title: "My Website"
   # title-prefix: "Site Name"
-  # title: "Brian M. Brost"
+  title: "Brian Brost"
   # title-prefix: "Brian Brost"
   favicon: media/logo.png
   navbar:
