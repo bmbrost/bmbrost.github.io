@@ -4,10 +4,7 @@ project:
 
 website:
   google-analytics: "G-GMY5LHEEJL"
-  # title: "My Website"
-  # title-prefix: "Site Name"
-  title: "Brian Brost"
-  # title-prefix: "Brian Brost"
+  # title: "Brian Brost"
   favicon: media/logo.png
   navbar:
     logo: media/logo.png
