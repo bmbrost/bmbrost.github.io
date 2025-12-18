@@ -22,7 +22,6 @@ format:
 
 
 # Coming soon...
-
 <br>
 <img src="/showcase/dgo.png" width="800px" class="center" border="1px solid #555">
 
