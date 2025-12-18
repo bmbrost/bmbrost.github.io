@@ -11,7 +11,7 @@ execute:
   warning: false
   message: false
 ---
-    
+     
 <!-- ```{=html} -->
 <!-- <nav aria-label="breadcrumb"> -->
 <!--   <ol class="breadcrumb"> -->
@@ -375,7 +375,7 @@ build_card <- function(
     },
     tagList(if (nzchar(venue %||% "")) tags$em(venue) else NULL)
   )
-
+   
   actions <- tags$div(
     class = "pub-actions",
     # Standalone star badge (only if primary)
