@@ -42,6 +42,6 @@ Statistics + Spatial Analysis + Data Visualization
 <!-- See: https://quarto.org/docs/authoring/article-layout.html#overflowing-content -->
 ::: {.column-page}
 <footer class="footer-main">
-Brian M. Brost &copy; 2025
+Brian M. Brost &copy; 2026
 </footer>
 :::

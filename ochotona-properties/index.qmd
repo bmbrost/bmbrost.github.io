@@ -1,6 +1,7 @@
 ---
 # title: "About"
-pagetitle: "Brian Brost - About"  # this goes in the browser tab
+pagetitle: "Ochotona Properties"  # this goes in the browser tab
+navbar: false
 toc: false
 
 format: 
@@ -17,7 +18,7 @@ format:
 # Hi.
 
 <br>
-I'm Brian. I work at the intersection of statistics, geospatial analysis, and conservation science. I have more than 15 years of experience finding the signal in a noisy world. Using advanced analytical techniques, I turn complex (and often messy) data into discovery. In particular, I specialize in the development and application of *boutique*  Bayesian hierarchical models that account for nuances like measurement error, imperfect detection (i.e., false positives and negatives), and spatio-temporal dependence. I also enjoy conveying stories through high-quality graphics and cartographic design. 
+Information about 259 W 31st Street
 
 I'm motivated by challenging problems and a desire to leave the world a little better than I found it. Please send me a <a href="mailto:bmbrost@gmail.com" style="color:#0b66c3; text-decoration: underline" title="Send an email">message</a> if you'd like to work together.
 
@@ -60,6 +61,6 @@ When not at my desk, I enjoy cooking (and baking), reading (usually non-fiction)
 <!-- See: https://quarto.org/docs/authoring/article-layout.html#overflowing-content -->
 ::: {.column-page}
 <footer class="footer-main"> 
-Brian M. Brost &copy; 2026
+Ochotona Properties &copy; 2026 
 </footer>
 :::
