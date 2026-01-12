@@ -81,41 +81,41 @@ Please send us a <a href="mailto:ochotonaproperties@gmail.com" style="color:#0b6
 ------------------------------------------------------------------------
 
 ::: {layout-ncol="3"}
-![](images/jpeg/sunset.jpeg){.lightbox group="my-gallery" description="View from second floor patio"}
+![](images/jpeg/sunset.jpeg){.lightbox group="my-gallery" description="View from second floor patio" style="border-radius:3px"}
 
-![](images/jpeg/street_view_2.jpeg){.lightbox group="my-gallery" description="Street view"}
+![](images/jpeg/street_view_2.jpeg){.lightbox group="my-gallery" description="Street view" style="border-radius:3px"}
 
-![](images/jpeg/living_room_1.jpeg){.lightbox group="my-gallery" description="Living room light"}
+![](images/jpeg/living_room_1.jpeg){.lightbox group="my-gallery" description="Living room light" style="border-radius:3px"}
 
-![](images/jpeg/living_room_3.jpeg){.lightbox group="my-gallery" description="Living room looking south"}
+![](images/jpeg/living_room_3.jpeg){.lightbox group="my-gallery" description="Living room looking south" style="border-radius:3px"}
 
-![](images/jpeg/kitchen_5.jpeg){.lightbox group="my-gallery" description="Large kitchen with a lot of storage"}
+![](images/jpeg/kitchen_5.jpeg){.lightbox group="my-gallery" description="Large kitchen with a lot of storage" style="border-radius:3px"}
 
-![](images/jpeg/kitchen_4.jpeg){.lightbox group="my-gallery" description="Large kitchen"}
+![](images/jpeg/kitchen_4.jpeg){.lightbox group="my-gallery" description="Large kitchen" style="border-radius:3px"}
 
-![](images/jpeg/kitchen_3.jpeg){.lightbox group="my-gallery" description="Large eat in kitchen"}
+![](images/jpeg/kitchen_3.jpeg){.lightbox group="my-gallery" description="Large eat in kitchen" style="border-radius:3px"}
 
-![](images/jpeg/laundry_room.jpeg){.lightbox group="my-gallery" description="Laundry nook"}
+![](images/jpeg/laundry_room.jpeg){.lightbox group="my-gallery" description="Laundry nook" style="border-radius:3px"}
 
-![](images/jpeg/garage.jpeg){.lightbox group="my-gallery" description="Oversized one-car garage"}
+![](images/jpeg/garage.jpeg){.lightbox group="my-gallery" description="Oversized one-car garage" style="border-radius:3px"}
 
-![](images/jpeg/backyard.jpeg){.lightbox group="my-gallery" description="Fenced backyard with patio"}
+![](images/jpeg/backyard.jpeg){.lightbox group="my-gallery" description="Fenced backyard with patio" style="border-radius:3px"}
 
-![](images/jpeg/primary_bedroom_2.jpeg){.lightbox group="my-gallery" description="Primary bedroom with patio/balcony"}
+![](images/jpeg/primary_bedroom_2.jpeg){.lightbox group="my-gallery" description="Primary bedroom with patio/balcony" style="border-radius:3px"}
 
-![](images/jpeg/primary_bathroom.jpeg){.lightbox group="my-gallery" description="Primary bathroom with double vanity"}
+![](images/jpeg/primary_bathroom.jpeg){.lightbox group="my-gallery" description="Primary bathroom with double vanity" style="border-radius:3px"}
 
-![](images/jpeg/upstairs_patio.jpeg){.lightbox group="my-gallery" description="Second floor patio/balcony"}
+![](images/jpeg/upstairs_patio.jpeg){.lightbox group="my-gallery" description="Second floor patio/balcony" style="border-radius:3px"}
 
-![](images/jpeg/bedroom_1.jpeg){.lightbox group="my-gallery" description="Bedroom #2"}
+![](images/jpeg/bedroom_1.jpeg){.lightbox group="my-gallery" description="Bedroom #2" style="border-radius:3px"}
 
-![](images/jpeg/street_view_3.jpeg){.lightbox group="my-gallery" description="Street view (winter)"}
+![](images/jpeg/street_view_3.jpeg){.lightbox group="my-gallery" description="Street view (winter)" style="border-radius:3px"}
 
-![](images/jpeg/bedroom_3.jpeg){.lightbox group="my-gallery" description="Bedroom #3"}
+![](images/jpeg/bedroom_3.jpeg){.lightbox group="my-gallery" description="Bedroom #3" style="border-radius:3px"}
 
-![](images/jpeg/full_bathroom.jpeg){.lightbox group="my-gallery" description="Second full bath"}
+![](images/jpeg/full_bathroom.jpeg){.lightbox group="my-gallery" description="Second full bath" style="border-radius:3px"}
 
-![](images/jpeg/linen_closet.jpeg){.lightbox group="my-gallery" description="Linen closet"}
+![](images/jpeg/linen_closet.jpeg){.lightbox group="my-gallery" description="Linen closet" style="border-radius:3px"}
 :::
 
 ::: column-page
