@@ -45,7 +45,6 @@ resources:
 :::
 
 ::::: {#hero-heading}
-<br> <br>
 
 ::: h4
 Quick Info
@@ -81,6 +80,7 @@ Please send us a <a href="mailto:ochotonaproperties@gmail.com" style="color:#0b6
 ------------------------------------------------------------------------
 
 ::: {layout-ncol="3"}
+
 ![](images/jpeg/sunset.jpeg){.lightbox group="my-gallery" description="View from second floor patio" style="border-radius:3px"}
 
 ![](images/jpeg/street_view_2.jpeg){.lightbox group="my-gallery" description="Street view" style="border-radius:3px"}
@@ -116,6 +116,7 @@ Please send us a <a href="mailto:ochotonaproperties@gmail.com" style="color:#0b6
 ![](images/jpeg/full_bathroom.jpeg){.lightbox group="my-gallery" description="Second full bath" style="border-radius:3px"}
 
 ![](images/jpeg/linen_closet.jpeg){.lightbox group="my-gallery" description="Linen closet" style="border-radius:3px"}
+
 :::
 
 ::: column-page
