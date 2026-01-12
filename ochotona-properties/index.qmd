@@ -4,125 +4,124 @@
 pagetitle: "Ochotona Properties"  # this goes in the browser tab
 navbar: false
 toc: false
-image: street_view.png
-website:
-  favicon: favicon.png
+image: images/street_view_1.png
 
 about:
   template: trestles
-  image-width: 14em
+  image-width: 30em
   image-shape: rounded
   id: hero-heading
+
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: bottom
+  loop: true
   
 format: 
   html: 
-    page-layout: full
+    # page-layout: full
+    grid:
+      sidebar-width: 250px
+      body-width: 800px
+      margin-width: 250px
+      gutter-width: 2rem
 
-header-includes: >
+header-includes:
   <link rel="stylesheet" href="assets/about.css">
+
 resources:
   - assets/about.css
+
+# filters:
+  # - lightbox
+  # - masonry
 ---
 
+<link rel="icon" type="image/png" href="favicon_color.png" />
 
+::: {style="text-align:center"} 
+<p style="font-family:'Nunito'; font-size:2em;">A Place to Call Home &nbsp;&bull;&nbsp; 259 W. 31^st^ Street</p>
+:::
 
-<div style="text-align:justify">
-# Hi.
+::::: {#hero-heading}
+<br> <br>
+
+::: h4
+Quick Info
+:::
+
+-   3 bedrooms / 2.5 baths
+-   1850 sq. ft.
+-   Private, fenced backyard
+-   1-car garage
+-   \$2950/mo (includes city utilities)
 
 <br>
-Information about 259 W 31st Street
 
-I'm motivated by challenging problems and a desire to leave the world a little better than I found it. Please send me a <a href="mailto:bmbrost@gmail.com" style="color:#0b66c3; text-decoration: underline" title="Send an email">message</a> if you'd like to work together.
+::: h4
+<a href="https://apply.link/DRRgCVk" target="_blank" style="color:#0b66c3; text-decoration: underline" title="Send an email">**Apply Here!**</a> <!-- [**Apply Here!**](https://apply.link/DRRgCVk){target="_blank"} -->
+:::
+:::::
 
+### In the Heart of Animas City
 
-When not at my desk, I enjoy cooking (and baking), reading (usually non-fiction), an occasional cocktail (or two), tinkering (in the garage), and finding solitude in wild places (preferably on foot, bicycle, or in a packraft).
+This lovely duplex is a great place to settle in and feel at home. The large eat-in kitchen has tons of counter space and storage and opens up to a bright, spacious living area—perfect for cooking, hanging out, or entertaining. Big living room windows look out toward Smelter Mountain and the historic Animas City Museum, bringing in great light and views.
 
-</div>
+The primary bedroom is upstairs and features its own private balcony patio with beautiful views—an ideal spot for morning coffee or winding down at the end of the day. The home has three bedrooms and two-and-a-half bathrooms, offering plenty of space to spread out.
 
+You’ll also enjoy a private, fenced backyard, a large one-car garage, and attractive xeriscaping that keeps outdoor maintenance simple and water use low. The location is hard to beat—walk or bike to trailheads, coffee shops, restaurants, groceries, and the river path, all nearby.
 
+The other side of the duplex is owner-occupied by quiet, respectful, local professionals. This is a comfortable, well-cared-for home in a fantastic neighborhood.
 
+Monthly rent of \$2950 includes city water and trash. No pets, no smoking. [Apply today](https://apply.link/DRRgCVk){target="_blank"} through RentSpree if interested!
 
-::: {#hero-heading}
-<div class="h1">A Place to Call Home</div>
+Please send us a <a href="mailto:ochotonaproperties@gmail.com" style="color:#0b66c3; text-decoration: underline" title="Send an email">message</a> if you have questions.
 
-Thanks for stopping by!
+------------------------------------------------------------------------
 
-I work as a data scientist at the [Urban Health Lab](https://www.urbanhealthlab.org/) at the University of Pennsylvania. My research interests include applications of biomedical and spatial data science in the public and population health fields. 
+::: {layout-ncol="3"}
+![](images/jpeg/sunset.jpeg){.lightbox group="my-gallery" description="View from second floor patio"}
 
-My current projects use electronic health record (EHR) and geospatial data to explore how the neighborhood environment and access to urban nature can impact the health of individuals in Philadelphia. Learn more about my research interests in [publications](/publication).
+![](images/jpeg/street_view_2.jpeg){.lightbox group="my-gallery" description="Street view"}
 
-Get in touch by [sending me a note](/contact.qmd)! {{< fa feather-pointed >}}
+![](images/jpeg/living_room_1.jpeg){.lightbox group="my-gallery" description="Living room light"}
 
+![](images/jpeg/living_room_3.jpeg){.lightbox group="my-gallery" description="Living room looking south"}
+
+![](images/jpeg/kitchen_5.jpeg){.lightbox group="my-gallery" description="Large kitchen with a lot of storage"}
+
+![](images/jpeg/kitchen_4.jpeg){.lightbox group="my-gallery" description="Large kitchen"}
+
+![](images/jpeg/kitchen_3.jpeg){.lightbox group="my-gallery" description="Large eat in kitchen"}
+
+![](images/jpeg/laundry_room.jpeg){.lightbox group="my-gallery" description="Laundry nook"}
+
+![](images/jpeg/garage.jpeg){.lightbox group="my-gallery" description="Oversized one-car garage"}
+
+![](images/jpeg/backyard.jpeg){.lightbox group="my-gallery" description="Fenced backyard with patio"}
+
+![](images/jpeg/primary_bedroom_2.jpeg){.lightbox group="my-gallery" description="Primary bedroom with patio/balcony"}
+
+![](images/jpeg/primary_bathroom.jpeg){.lightbox group="my-gallery" description="Primary bathroom with double vanity"}
+
+![](images/jpeg/upstairs_patio.jpeg){.lightbox group="my-gallery" description="Second floor patio/balcony"}
+
+![](images/jpeg/bedroom_1.jpeg){.lightbox group="my-gallery" description="Bedroom #2"}
+
+![](images/jpeg/street_view_3.jpeg){.lightbox group="my-gallery" description="Street view (winter)"}
+
+![](images/jpeg/bedroom_3.jpeg){.lightbox group="my-gallery" description="Bedroom #3"}
+
+![](images/jpeg/full_bathroom.jpeg){.lightbox group="my-gallery" description="Second full bath"}
+
+![](images/jpeg/linen_closet.jpeg){.lightbox group="my-gallery" description="Linen closet"}
 :::
 
-## About me
+::: column-page
+<footer class="footer-main">
 
-::: {.grid}
+Ochotona Properties © 2026
 
-::: {.g-col-6 #about-me-1}
-
-**Biomedical engineer turned informaticist, curious about all intersections of data and society.**
-
-I enjoy using [R](https://www.r-project.org/about.html) to optimize my data science workflow and have noticed it making guest appearances elsewhere in my life. I'm certified as an [RStudio Tidyverse Instructor](https://education.rstudio.com/trainers/people/canelon+silvia/) and am passionate about R education and data literacy as ways to build power in communities. Keep up with my R tinkering in my [blog](/blog) and presentations in [talks](/talk).
-
-<ul class="fa-ul">
-   <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span><a href="https://education.rstudio.com/trainers/people/canelon+silvia/">Tidyverse Instructor Certification</a> ∙ RStudio, PBC ∙ 2020</li>
-</ul>
-
-:::
-
-::: {.g-col-6 #about-me-2}
-
-Prior to joining the Urban Health Lab, I developed novel data mining methods to extract meaningful information from the EHR and study health outcomes and disparities in pregnant populations. I'm particularly interested in research that combines biomedical data science with open data sources in ways that prioritize health equity in communities.
-
-<ul class="fa-ul">
-   <li><span class="fa-li"><i class="fa-solid fa-certificate"></i></span><a href="https://www.med.upenn.edu/mbmi/certificate.html">Certificate in Biomedical Informatics</a> ∙ University of Pennsylvania ∙ 2019</li>
-   <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>Ph.D. in Biomedical Engineering ∙ Purdue University ∙ 2018</li>
-   <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>B.S. in Biomedical Engineering ∙ University of Minnesota ∙ 2012</li>
-</ul>
-
-:::
-
-:::
-<!-- end grid -->
-
-## Lately ...
-
-:::: {.grid}
-
-::: {.g-col-3}
-#### Projects
-::: {#project}
-:::
-[See all &rarr;](../project){.about-links .subtitle}
-:::
-
-::: {.g-col-3}
-#### Talks
-::: {#talk}
-:::
-[See all &rarr;](../talk){.about-links .subtitle}
-:::
-
-::: {.g-col-3}
-#### Blog
-::: {#blog}
-:::
-[See all &rarr;](../blog){.about-links .subtitle}
-:::
-
-::: {.g-col-3}
-#### Publications
-::: {#publication}
-:::
-[See all &rarr;](../publication){.about-links .subtitle}
-:::
-
-::: {.column-page}
-<footer class="footer-main"> 
-Ochotona Properties &copy; 2026 
 </footer>
 :::
-
-::::
-
