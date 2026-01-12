@@ -4,7 +4,7 @@
 pagetitle: "Ochotona Properties"  # this goes in the browser tab
 navbar: false
 toc: false
-image: images/street_view_1.png
+image: images/jpeg/street_view_1.jpeg
 
 about:
   template: trestles
