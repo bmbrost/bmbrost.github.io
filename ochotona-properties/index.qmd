@@ -120,7 +120,7 @@ If you have any questions, please send us a message at <a href="mailto:ochotonap
 
 ![](images/jpeg/full_bathroom.jpeg){.lightbox group="my-gallery" description="Second full bath" style="border-radius:3px"}
 
-![](images/jpeg/linen_closet.jpeg){.lightbox group="my-gallery" description="Linen closet" style="border-radius:3px"}
+![](images/jpeg/linen_closet.jpeg){.lightbox group="my-gallery" description="Upstairs linen closet" style="border-radius:3px"}
 
 :::
 
