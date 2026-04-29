@@ -3,7 +3,7 @@
 pagetitle: "Brian Brost - Showcase"  # this goes in the browser tab
 toc: false
 
-# format: 
+# format:
 #   html:
 #     page-layout: full
     
@@ -20,15 +20,91 @@ format:
 <!-- https://avrodrigues.github.io/dataviz.html -->
 <!-- https://www.etiennebacher.com/gallery -->
 
+```{r,echo=FALSE}
+
+library(glue)
+figure_quarto <- function(
+    img_tag, ## like: '![](image.png)'
+    code_src = NULL ## an url
+){
+  if(!is.null(code_src)){
+    icon_tag <- glue::glue(
+      "<a href={code_src}><i class='bi bi-code-slash'></i></a>"
+    )
+
+    figure_tag <- glue(
+      "
+      :::{{.figure}}
+
+      {icon_tag}
+      {img_tag}
+
+      :::
+
+      ")
+  } else {
+    figure_tag <- glue(
+      "
+      :::{{.figure}}
+
+      {img_tag}
+
+      :::
+
+      ")
+  }
+
+  cat(figure_tag)
+
+}
+```
 
 # Coming soon...
+
+<!-- ::: {.grid} -->
+
+<!-- ::: {.g-col-12 .g-col-md-6} -->
+
+<!-- ```{r,eval=FALSE} -->
+<!-- #| results: asis -->
+<!-- #| echo: false -->
+
+<!-- # source("R/figure_quarto.R") -->
+
+<!-- # Durango -->
+<!-- figure_quarto( -->
+<!--   "![](/showcase/dgo.png)" -->
+<!--   # "![](https://raw.githubusercontent.com/avrodrigues/Tidy_tuesday/main/2021/week14/makeup.png)" -->
+<!--   # 'https://github.com/avrodrigues/Tidy_tuesday/blob/main/2021/week14/makeup_shades.R') -->
+
+<!-- ) -->
+
+
+<!-- ``` -->
+
+<!-- ::: -->
+
+<!-- ::: {.g-col-6 .g-col-md-3} -->
+<!-- <img src="/showcase/dgo.png" class="center" border="1px solid #555" style="border-radius: 5px;"> -->
+
+<!-- ::: -->
+
+<!-- ::: {.g-col-6 .g-col-md-3} -->
+<!-- <img src="/showcase/precip.png" class="center" border="1px solid #555" style="border-radius: 5px;"> -->
+
+<!-- ::: -->
+
+
 <br>
-<img src="/showcase/dgo.png" width="800px" class="center" border="1px solid #555">
+<img src="/showcase/dgo.png" width="600px" class="center" border="1px solid #555"
+style="border-radius: 5px;">
+
+<img src="/showcase/precip.png" width="600px" class="center" border="1px solid #555" style="border-radius: 5px;">
 
 <!-- Add footer -->
 <!-- See: https://quarto.org/docs/authoring/article-layout.html#overflowing-content -->
 ::: {.column-page}
-<footer class="footer-main"> 
-Brian M. Brost &copy; 2026 
+<footer class="footer-main">
+Brian M. Brost &copy; 2026
 </footer>
 :::

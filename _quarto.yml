@@ -11,16 +11,16 @@ website:
     # logo-alt:
     right:
       - href: index.qmd
-        text: Home
+        text: home
       - href: about/index.qmd
-        text: About
+        text: about
       - href: cv/index.qmd
-        text: CV
+        text: cv
       - href: showcase/index.qmd
-        text: Showcase
+        text: showcase
       # - href: publications/index_old.qmd
       - href: publications/index.qmd
-        text: Publications 
+        text: publications 
   # page-footer:
     # background: light # or `dark` or omit this option altogether (footer color will match page body color)
     # left: Brian M. Brost &copy; 2025
