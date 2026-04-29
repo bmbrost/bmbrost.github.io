@@ -5,11 +5,12 @@ toc: false
 
 format:
   html:
+    page-layout: full
     grid:
-      sidebar-width: 150px
-      body-width: 1000px
-      margin-width: 150px
-      gutter-width: 2rem
+      sidebar-width: 250px
+      body-width: 800px
+      margin-width: 250px
+      gutter-width: 20px
     
 ---
 
@@ -71,7 +72,7 @@ figure_quarto <- function(
 
 ::: {.figure}
 
-<img src="/showcase/dgo.png" width="450px" border="1px solid #555" style="border-radius: 5px;">
+<img src="/showcase/dgo.png" width="390px" border="1px solid #555" style="border-radius: 5px;">
 
 :::
 
@@ -81,7 +82,7 @@ figure_quarto <- function(
 
 ::: {.figure}
 
-<img src="/showcase/precip.png" width="450px" border="1px solid #555" style="border-radius: 5px;">
+<img src="/showcase/precip.png" width="390px" border="1px solid #555" style="border-radius: 5px;">
 
 :::
 
@@ -94,7 +95,11 @@ figure_quarto <- function(
 <!-- Add footer -->
 <!-- See: https://quarto.org/docs/authoring/article-layout.html#overflowing-content -->
 
-::: {.column-page}
+<!-- <footer class="footer-main"> -->
+<!-- Brian M. Brost &copy; 2026 -->
+<!-- </footer> -->
+
+::: {.column-full}
 <footer class="footer-main">
 Brian M. Brost &copy; 2026
 </footer>
