@@ -3,17 +3,14 @@
 pagetitle: "Brian Brost - Showcase"  # this goes in the browser tab
 toc: false
 
-# format:
-#   html:
-#     page-layout: full
-    
-format: 
+format:
   html:
     grid:
       sidebar-width: 150px
       body-width: 1000px
       margin-width: 150px
       gutter-width: 2rem
+    
 ---
 
 <!-- Examples for inspiration: -->
@@ -62,35 +59,35 @@ figure_quarto <- function(
 # Coming soon...
 
 <br>
-<img src="/showcase/dgo.png" width="800px" class="center" border="1px solid #555"
-style="border-radius: 5px;">
-
-<img src="/showcase/precip.png" width="800px" class="center" border="1px solid #555" style="border-radius: 5px;">
-
-
-<!-- ::: {.grid} -->
-
-<!-- ::: {.g-col-12 .g-col-md-6} -->
-
-<!-- ::: {.figure} -->
-
-<!-- <img src="/showcase/dgo.png" width="800px" class="center" border="1px solid #555" style="border-radius: 5px;"> -->
-
-<!-- ::: -->
-
-<!-- ::: -->
-
-<!-- ::: {.g-col-12 .g-col-md-6} -->
-
-<!-- ::: {.figure} -->
+<!-- <img src="/showcase/dgo.png" width="800px" class="center" border="1px solid #555" -->
+<!-- style="border-radius: 5px;"> -->
 
 <!-- <img src="/showcase/precip.png" width="800px" class="center" border="1px solid #555" style="border-radius: 5px;"> -->
 
-<!-- ::: -->
 
-<!-- ::: -->
+::: {.grid}
 
-<!-- ::: -->
+::: {.g-col-12 .g-col-md-6}
+
+::: {.figure}
+
+<img src="/showcase/dgo.png" width="450px" border="1px solid #555" style="border-radius: 5px;">
+
+:::
+
+:::
+
+::: {.g-col-12 .g-col-md-6}
+
+::: {.figure}
+
+<img src="/showcase/precip.png" width="450px" border="1px solid #555" style="border-radius: 5px;">
+
+:::
+
+:::
+
+:::
 
 
 
