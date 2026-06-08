@@ -87,7 +87,7 @@ figure_quarto <- function(
 
 <!-- <img src="/showcase/precip.png" width="800px" class="center" border="1px solid #555" style="border-radius: 5px;"> -->
 
-
+ 
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6}
