@@ -4,7 +4,7 @@
     "href": "showcase/index.html",
     "title": "Coming soon…",
     "section": "",
-    "text": "Coming soon…\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBrian M. Brost © 2026"
+    "text": ".image-icon .bi-code-slash {\n  color: #363632;\n  position:absolute;\n  background: #FEFEFA99;\n  left: 92%;\n  top: 5%;\n  padding: 5px;\n  border-radius: 5px;\n  border: 1px solid #686864;\n}\n\n.bi-code-slash {\n  float: right;\n  padding: 5px;\n}\n\n\n\n\n\n\nComing soon…\n  \n\n\n\n  \"&lt;a href={code_src}&gt;&lt;i class='bi bi-code-slash'&gt;&lt;/i&gt;&lt;/a&gt;\"\n\n“” \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBrian M. Brost © 2026"
   },
   {
     "objectID": "index.html",
