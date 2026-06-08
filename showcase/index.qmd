@@ -49,7 +49,7 @@ figure_quarto <- function(
   
   if(!is.null(code_src)){
     icon_tag <- glue::glue(
-      "<a href={code_src}><i class='bi bi-code-slash'></i></a>"
+      "<a href={code_src} target='_blank'><i class='bi bi-code-slash'></i></a>"
     )
     
     figure_tag <- glue(
