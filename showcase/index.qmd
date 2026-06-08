@@ -103,7 +103,8 @@ figure_quarto <- function(
 #   'https://github.com/bmbrost/bmbrost.github.io/showcase/dgo.R'
 # )
 
-figure_quarto("/showcase/dgo.png","/showcase/dgo.R")  # dgo
+figure_quarto("/showcase/dgo.png",
+              'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/dgo.R')  # dgo
 
 ```
 
@@ -120,7 +121,17 @@ figure_quarto("/showcase/dgo.png","/showcase/dgo.R")  # dgo
 
 ::: {.figure}
 
-<img src="/showcase/precip.png" width="100%" border="1px solid #555" style="border-radius: 5px;">
+```{r}
+#| results: asis
+#| echo: false
+
+# source("R/figure_quarto.R")
+
+figure_quarto("/showcase/precip.png")  # The Wild Owyhee
+
+```
+
+<!-- <img src="/showcase/precip.png" width="100%" border="1px solid #555" style="border-radius: 5px;"> -->
 
 :::
 
