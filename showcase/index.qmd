@@ -72,7 +72,7 @@ figure_quarto <- function(
 
 ::: {.figure}
 
-<img src="/showcase/dgo.png" width="390px" border="1px solid #555" style="border-radius: 5px;">
+<img src="/showcase/dgo.png" width="100%" border="1px solid #555" style="border-radius: 5px;">
 
 :::
 
@@ -82,7 +82,7 @@ figure_quarto <- function(
 
 ::: {.figure}
 
-<img src="/showcase/precip.png" width="390px" border="1px solid #555" style="border-radius: 5px;">
+<img src="/showcase/precip.png" width="100%" border="1px solid #555" style="border-radius: 5px;">
 
 :::
 
