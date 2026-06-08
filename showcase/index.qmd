@@ -14,7 +14,7 @@ format:
     
 ---
 
-```{css}
+```{css, echo=FALSE}
 .image-icon .bi-code-slash {
   color: #363632;
   position:absolute;
@@ -43,11 +43,15 @@ figure_quarto <- function(
     img_tag, ## like: '![](image.png)'
     code_src = NULL ## an url
 ){
+  img_tag <- glue::glue(
+    "<img src={img_tag} width='100%' border='1px solid #555' style='border-radius: 5px;'>"
+  )
+  
   if(!is.null(code_src)){
     icon_tag <- glue::glue(
       "<a href={code_src}><i class='bi bi-code-slash'></i></a>"
     )
-
+    
     figure_tag <- glue(
       "
       :::{{.figure}}
@@ -87,13 +91,28 @@ figure_quarto <- function(
 ::: {.grid}
 
 ::: {.g-col-12 .g-col-md-6}
-      "<a href={code_src}><i class='bi bi-code-slash'></i></a>"
 
-::: {.figure}
-"<a href={code_src}><i class='bi bi-code-slash'></i></a>"
-<img src="/showcase/dgo.png" width="100%" border="1px solid #555" style="border-radius: 5px;">
+```{r}
+#| results: asis
+#| echo: false
 
-:::
+# source("R/figure_quarto.R")
+
+# figure_quarto(
+#   "![](/showcase/dgo.png)",
+#   'https://github.com/bmbrost/bmbrost.github.io/showcase/dgo.R'
+# )
+
+figure_quarto("/showcase/dgo.png","/showcase/dgo.R")  # dgo
+
+```
+
+<!-- ::: {.figure} -->
+
+<!-- <a href='https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/dgo.R' target="_blank"><i class='bi bi-code-slash'></i></a> -->
+<!-- <img src="/showcase/dgo.png" width="100%" border="1px solid #555" style="border-radius: 5px;"> -->
+
+<!-- ::: -->
 
 :::
 
