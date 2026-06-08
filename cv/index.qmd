@@ -29,6 +29,7 @@ format:
 <!-- ../media/brost_cv.html? Why don't links work when files are in cv/? -->
 
 <!-- Embed HTML version of CV -->
+
 <object type="text/html" data="/cv/brost_cv.html" width="840px" height="1080px" style="border-radius: 5px;"/>
 
 <!-- Add footer -->
