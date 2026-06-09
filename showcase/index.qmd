@@ -99,12 +99,13 @@ figure_quarto <- function(
 # source("R/figure_quarto.R")
 
 # figure_quarto(
-#   "![](/showcase/dgo.png)",
-#   'https://github.com/bmbrost/bmbrost.github.io/showcase/dgo.R'
+#   "![](/showcase/dgo/dgo.png)",
+#   'https://github.com/bmbrost/bmbrost.github.io/showcase/dgo/dgo.R'
 # )
 
-figure_quarto("/showcase/dgo.png",
-              'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/dgo.R')  # dgo
+# dgo
+figure_quarto("/showcase/dgo/dgo.png",
+              'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/dgo/dgo.R')
 
 ```
 
@@ -125,7 +126,8 @@ figure_quarto("/showcase/dgo.png",
 
 # source("R/figure_quarto.R")
 
-figure_quarto("/showcase/precip.png")  # The Wild Owyhee
+# The Wild Owyhee
+figure_quarto("/showcase/owyhee/precip.png")
 
 ```
 
