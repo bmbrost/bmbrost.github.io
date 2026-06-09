@@ -10,7 +10,7 @@ format:
       sidebar-width: 250px
       body-width: 800px
       margin-width: 250px
-      gutter-width: 20px
+      gutter-width: 1.5rem
     
 ---
 

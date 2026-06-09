@@ -10,6 +10,15 @@ execute:
   echo: false 
   warning: false
   message: false
+  
+format:
+  html:
+    grid:
+      sidebar-width: 250px
+      body-width: 800px
+      margin-width: 250px
+      gutter-width: 1.5rem
+
 ---
 
 <!-- Examples for inspiration:    -->
