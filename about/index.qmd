@@ -6,25 +6,46 @@ toc: false
 format: 
   html:
     grid:
-      sidebar-width: 350px
-      body-width: 600px
-      margin-width: 350px
-      gutter-width: 2rem
+      sidebar-width: 250px
+      body-width: 800px
+      margin-width: 250px
+      gutter-width: 1.5rem
+      # sidebar-width: 350px
+      # body-width: 600px
+      # margin-width: 350px
+      # gutter-width: 2rem
 ---
 
 
-<div style="text-align:justify">
+::: {style="max-width: 600px; margin: 0 auto;"}
+
 # Hi.
+
+<div style="text-align:justify">
 
 <br>
 I'm Brian. I work at the intersection of statistics, geospatial analysis, and conservation science. I have more than 15 years of experience finding the signal in a noisy world. Using advanced analytical techniques, I turn complex (and often messy) data into discovery. In particular, I specialize in the development and application of *boutique*  Bayesian hierarchical models that account for nuances like measurement error, imperfect detection (i.e., false positives and false negatives), and spatio-temporal dependence. I also enjoy conveying stories through high-quality graphics and cartographic design. 
 
 I'm motivated by challenging problems and a desire to leave the world a little better than I found it. Please send me a <a href="mailto:bmbrost@gmail.com" style="color:#0b66c3; text-decoration: underline" title="Send an email">message</a> if you'd like to work together.
 
-
 When not at my desk, I enjoy cooking (and baking), reading (usually non-fiction), an occasional cocktail (or two), tinkering (in the garage), and finding solitude in wild places (preferably on foot, bicycle, skis, or in a packraft).
 
 </div>
+
+:::
+
+
+<!-- <div style="text-align:justify"> -->
+<!-- # Hi. -->
+
+<!-- <br> -->
+<!-- I'm Brian. I work at the intersection of statistics, geospatial analysis, and conservation science. I have more than 15 years of experience finding the signal in a noisy world. Using advanced analytical techniques, I turn complex (and often messy) data into discovery. In particular, I specialize in the development and application of *boutique*  Bayesian hierarchical models that account for nuances like measurement error, imperfect detection (i.e., false positives and false negatives), and spatio-temporal dependence. I also enjoy conveying stories through high-quality graphics and cartographic design.  -->
+
+<!-- I'm motivated by challenging problems and a desire to leave the world a little better than I found it. Please send me a <a href="mailto:bmbrost@gmail.com" style="color:#0b66c3; text-decoration: underline" title="Send an email">message</a> if you'd like to work together. -->
+
+<!-- When not at my desk, I enjoy cooking (and baking), reading (usually non-fiction), an occasional cocktail (or two), tinkering (in the garage), and finding solitude in wild places (preferably on foot, bicycle, skis, or in a packraft). -->
+
+<!-- </div> -->
 
 <!-- ::: {.column-margin} -->
 
@@ -52,13 +73,12 @@ When not at my desk, I enjoy cooking (and baking), reading (usually non-fiction)
 
 <!-- NOAA | Statistician (Biology) | 2017 - 2025 -->
 
-<!-- GeoScynce | Chief Analyst | Spet 2012 - April 2018 -->
-
 <!-- ::: -->
 
 <!-- Add footer -->
 <!-- See: https://quarto.org/docs/authoring/article-layout.html#overflowing-content -->
-::: {.column-page}
+
+::: {.column-body}
 <footer class="footer-main"> 
 Brian M. Brost &copy; 2026
 </footer>

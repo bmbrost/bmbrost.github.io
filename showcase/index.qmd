@@ -5,7 +5,7 @@ toc: false
 
 format:
   html:
-    page-layout: full
+    # page-layout: full
     grid:
       sidebar-width: 250px
       body-width: 800px
@@ -79,7 +79,7 @@ figure_quarto <- function(
 }
 ```
 
-# Coming soon...
+# More soon...
 
 <br>
 <!-- <img src="/showcase/dgo.png" width="800px" class="center" border="1px solid #555" -->
@@ -148,7 +148,7 @@ figure_quarto("/showcase/precip.png")  # The Wild Owyhee
 <!-- Brian M. Brost &copy; 2026 -->
 <!-- </footer> -->
 
-::: {.column-full}
+::: {.column-body}
 <footer class="footer-main">
 Brian M. Brost &copy; 2026
 </footer>

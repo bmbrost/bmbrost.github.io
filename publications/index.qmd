@@ -442,3 +442,9 @@ groups <- lapply(years, function(y) {
 
 browsable(tags$div(groups))
 ```
+
+<!-- ::: {.column-body} -->
+<!-- <footer class="footer-main"> -->
+<!-- Brian M. Brost &copy; 2026 -->
+<!-- </footer> -->
+<!-- ::: -->

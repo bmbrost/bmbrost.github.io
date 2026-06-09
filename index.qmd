@@ -11,10 +11,14 @@ toc: false
 format: 
   html:
     grid:
-      sidebar-width: 350px
-      body-width: 600px
-      margin-width: 350px
-      gutter-width: 2rem
+      sidebar-width: 250px
+      body-width: 800px
+      margin-width: 250px
+      gutter-width: 1.5rem
+      # sidebar-width: 350px
+      # body-width: 600px
+      # margin-width: 350px
+      # gutter-width: 2rem
     # page-layout: full
 ---
 
@@ -28,19 +32,20 @@ format:
 
 ::: {.headline}
 Statistics + Spatial Analysis + Data Visualization
-:::  
+:::
+
 <br>
 
 <!-- Icons for LinkedIn, GitHub, Email, etc. -->
 <div style="text-align:center">
-<a href="https://www.linkedin.com/in/bmbrost/" class="landing-icons" target="_blank">{{<fa brands linkedin title="LinkedIn">}}</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://github.com/bmbrost" class="landing-icons" target="_blank">{{<fa brands github title="GitHub">}}</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a onClick="javascript:window.open('mailto:bmbrost@gmail.com', 'mail');event.preventDefault()" href="mailto:bmbrost@gmail.com" class="landing-icons">{{<fa envelope title="Send an email">}}</a>
+
+<a href="https://www.linkedin.com/in/bmbrost/" class="landing-icons" target="_blank">{{<fa brands linkedin title="LinkedIn">}}</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/bmbrost" class="landing-icons" target="_blank">{{<fa brands github title="GitHub">}}</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a onClick="javascript:window.open('mailto:bmbrost@gmail.com', 'mail');event.preventDefault()" href="mailto:bmbrost@gmail.com" class="landing-icons">{{<fa envelope title="Send an email">}}</a>
+
 </div> 
 
 <!-- Add footer -->
 <!-- See: https://quarto.org/docs/authoring/article-layout.html#overflowing-content -->
-::: {.column-page}
+::: {.column-body}
 <footer class="footer-main">
 Brian M. Brost &copy; 2026
 </footer>
