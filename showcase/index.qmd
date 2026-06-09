@@ -119,8 +119,6 @@ figure_quarto("/showcase/dgo.png",
 
 ::: {.g-col-12 .g-col-md-6}
 
-::: {.figure}
-
 ```{r}
 #| results: asis
 #| echo: false
@@ -131,9 +129,11 @@ figure_quarto("/showcase/precip.png")  # The Wild Owyhee
 
 ```
 
+<!-- ::: {.figure} -->
+
 <!-- <img src="/showcase/precip.png" width="100%" border="1px solid #555" style="border-radius: 5px;"> -->
 
-:::
+<!-- ::: -->
 
 :::
 
