@@ -105,6 +105,7 @@ figure_quarto <- function(
 
 # dgo
 figure_quarto("/showcase/dgo/dgo.png",
+              # '![](/showcase/dgo/dgo.png)',
               'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/dgo/dgo.R')
 
 ```
@@ -128,7 +129,7 @@ figure_quarto("/showcase/dgo/dgo.png",
 
 # The Wild Owyhee
 figure_quarto("/showcase/owyhee/precip.png")
-
+    # '![](/showcase/owyhee/precip.png)'
 ```
 
 <!-- ::: {.figure} -->

@@ -33,13 +33,14 @@ format:
 ::: 
  
 <!-- Embed HTML version of CV -->
-<object type="text/html" data="/cv/brost_cv.html" width="840px" height="1080px" style="border-radius: 5px;"/>
 
+<!-- <object type="text/html" data="/cv/brost_cv.html" width="840px" height="1080px" style="border-radius: 5px;"/> -->
+
+![](/cv/brost_cv.html){width="100%" height="1080px" style="border-radius: 5px;"}
 
 <!-- Add footer -->
-<!-- ::: {.column-page} -->
-<!-- <footer class="footer-main"> -->
-<!-- Brian M. Brost &copy; 2025 -->
-<!-- </footer> -->
-<!-- ::: -->
-
+::: {.column-body}
+<footer class="footer-main"> 
+Brian M. Brost &copy; 2026
+</footer>
+:::
