@@ -10,6 +10,7 @@
 ###
 
 library(tidyverse)
+library(slider)
 
 # Spatial
 library(sf)
@@ -127,6 +128,12 @@ dem_df <- dem_agg %>%
   as_tibble() %>%
   replace_na(list(elev = 0))  # replace NA values with 0
 
+# Apply moving average to smooth out peaks
+dem_df <- dem_df %>%
+  group_by(y) %>%
+  arrange(x) %>%
+  mutate(ma_elev = slide_dbl(elev, mean, .before = 1, .after = 1))
+
 # Create 'unknown pleasures' plot
 ggplot() +
   geom_ridgeline(
@@ -134,7 +141,7 @@ ggplot() +
       x = x,
       y = y,
       group = y,
-      height = elev
+      height = ma_elev
     ),
     data = dem_df %>% 
       filter(y > 5359000 & y < 5635000),
