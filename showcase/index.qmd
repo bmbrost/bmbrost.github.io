@@ -127,6 +127,12 @@ figure_quarto("/showcase/dgo/dgo.png",
 # Map of the Owyhee River watershed (The Wild Owyhee)
 figure_quarto("/showcase/owyhee/precip.png")
     # '![](/showcase/owyhee/precip.png)'
+
+# Unknown Treasures
+figure_quarto("/showcase/treasures/treasures.png",
+              # '![](/showcase/dgo/dgo.png)',
+              'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/treasures/treasures.R')
+
 ```
 
 
