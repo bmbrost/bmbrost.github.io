@@ -5,6 +5,7 @@
 ###
 
 
+
 ###
 ### Libraries and subroutines
 ###
@@ -132,7 +133,7 @@ dem_df <- dem_agg %>%
 dem_df <- dem_df %>%
   group_by(y) %>%
   arrange(x) %>%
-  mutate(ma_elev = slide_dbl(elev, mean, .before = 1, .after = 1))
+  mutate(ma_elev = slide_dbl(elev, mean, .before = 1, .after = 0))
 
 # Create 'unknown pleasures' plot
 ggplot() +
