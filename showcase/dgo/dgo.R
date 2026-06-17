@@ -58,20 +58,33 @@ med_roads <- dgo_box %>%  # medium roads
   opq() %>%
   add_osm_feature(
     key = "highway",
-    value = c("secondary", "tertiary", "secondary_link", "tertiary_link")
+    value = c(
+      "secondary", 
+      "tertiary", 
+      "secondary_link", 
+      "tertiary_link"
+    )
   ) %>%
   osmdata_sf()
 
 small_roads <- dgo_box %>%  # small roads
   opq() %>%
-  add_osm_feature(key = "highway",
-                  value = c("residential", "living_street")) %>%
+  add_osm_feature(
+    key = "highway",
+    value = c(
+      "residential", 
+      "living_street"
+    )
+  ) %>%
   osmdata_sf()
 
 # Get rivers
 rivers <- dgo_box %>%  # all rivers
   opq() %>%
-  add_osm_feature(key = "waterway", value = "river") %>%
+  add_osm_feature(
+    key = "waterway", 
+    value = "river"
+  ) %>%
   osmdata_sf()
 
 animas <- rivers$osm_lines %>%  # Animas River only
@@ -80,7 +93,10 @@ animas <- rivers$osm_lines %>%  # Animas River only
 # Durango & Silverton Narrow Gauge Railroad
 rail <- dgo_box %>%
   opq() %>%
-  add_osm_feature(key = "railway", value = "narrow_gauge") %>%
+  add_osm_feature(
+    key = "railway", 
+    value = "narrow_gauge"
+  ) %>%
   osmdata_sf()
 
 # Highway labels and placements
@@ -101,15 +117,23 @@ ggplot() +
     linewidth = 0.21,
     color = "cyan4"
   ) +
-  geom_sf(data = animas,
-          linewidth = 0.5,
-          color = "cyan4") +
-  geom_sf(data = small_roads$osm_lines, 
-          linewidth = 0.075) +
-  geom_sf(data = med_roads$osm_lines, 
-          linewidth = 0.1) +
-  geom_sf(data = big_roads$osm_lines, 
-          linewidth = 0.5) +
+  geom_sf(
+    data = animas,
+    linewidth = 0.5,
+    color = "cyan4"
+  ) +
+  geom_sf(
+    data = small_roads$osm_lines, 
+    linewidth = 0.075
+  ) +
+  geom_sf(
+    data = med_roads$osm_lines, 
+    linewidth = 0.1
+  ) +
+  geom_sf(
+    data = big_roads$osm_lines, 
+    linewidth = 0.5
+  ) +
   geom_sf(
     data = rail$osm_lines,
     linewidth = 0.25,
@@ -150,18 +174,21 @@ ggplot() +
     family = "gilda",
     size = 3
   ) +
-  geom_line(aes(
-    y = c(37.3425, 37.3425),
-    x = c(-107.94 + 0.01, -107.817 - 0.01)
-  ),
-  linewidth = 5,
-  color = "#fcf9f4") +
-  geom_line(aes(
-    y = c(37.3425, 37.3425),
-    x = c(-107.94 + 0.01, -107.817 - 0.01)
-  ),
-  linewidth = 0.1,
-  color = "gray10") +
+  geom_line(
+    aes(
+      y = c(37.3425, 37.3425),
+      x = c(-107.94 + 0.01, -107.817 - 0.01)
+    ),
+    linewidth = 5,
+    color = "#fcf9f4"
+  ) +
+  geom_line(
+    aes(
+      y = c(37.3425, 37.3425),
+      x = c(-107.94 + 0.01, -107.817 - 0.01)
+    ),
+    linewidth = 0.1,
+    color = "gray10") +
   annotate(  # label Animas River
     geom = "text",
     x = -107.905,
@@ -198,7 +225,7 @@ ggplot() +
     plot.background = element_rect(
       fill = "#fcf9f4", 
       color = "#fcf9f4"
-      ),
+    ),
     plot.title = element_text(
       size = 30,
       family = "tangerine",
