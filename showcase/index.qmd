@@ -12,8 +12,6 @@ format:
       margin-width: 250px
       gutter-width: 1.5rem
 
-# filters:
-#   - lightbox
 lightbox:
   match: auto
   effect: fade
@@ -103,11 +101,6 @@ figure_quarto <- function(
 
 # source("R/figure_quarto.R")
 
-# figure_quarto(
-#   "![](/showcase/dgo/dgo.png)",
-#   'https://github.com/bmbrost/bmbrost.github.io/showcase/dgo/dgo.R'
-# )
-
 # Animas River discharge (animas)
 figure_quarto("/showcase/animas/animas.png",
               # '![](/showcase/animas/animas.png)',
@@ -120,14 +113,8 @@ figure_quarto("/showcase/dgo/dgo.png",
 
 ```
 
-<!-- ::: {.figure} -->
-
-<!-- <a href='https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/dgo.R' target="_blank"><i class='bi bi-code-slash'></i></a> -->
-<!-- <img src="/showcase/dgo.png" width="100%" border="1px solid #555" style="border-radius: 5px;"> -->
-
-<!-- ::: -->
-
 :::
+
 
 ::: {.g-col-12 .g-col-md-6}
 
@@ -142,24 +129,11 @@ figure_quarto("/showcase/owyhee/precip.png")
     # '![](/showcase/owyhee/precip.png)'
 ```
 
-<!-- ::: {.figure} -->
-
-<!-- <img src="/showcase/precip.png" width="100%" border="1px solid #555" style="border-radius: 5px;"> -->
-
-<!-- ::: -->
 
 :::
 
 :::
 
-
-
-<!-- Add footer -->
-<!-- See: https://quarto.org/docs/authoring/article-layout.html#overflowing-content -->
-
-<!-- <footer class="footer-main"> -->
-<!-- Brian M. Brost &copy; 2026 -->
-<!-- </footer> -->
 
 ::: {.column-body}
 <footer class="footer-main">
