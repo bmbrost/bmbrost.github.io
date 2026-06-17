@@ -103,7 +103,12 @@ figure_quarto <- function(
 #   'https://github.com/bmbrost/bmbrost.github.io/showcase/dgo/dgo.R'
 # )
 
-# dgo
+# Animas River discharge (animas)
+figure_quarto("/showcase/animas/animas.png",
+              # '![](/showcase/dgo/dgo.png)',
+              'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/animas/animas.R')
+
+# Map of Durango (dgo)
 figure_quarto("/showcase/dgo/dgo.png",
               # '![](/showcase/dgo/dgo.png)',
               'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/dgo/dgo.R')
@@ -127,7 +132,7 @@ figure_quarto("/showcase/dgo/dgo.png",
 
 # source("R/figure_quarto.R")
 
-# The Wild Owyhee
+# Map of the Owyhee River watershed (The Wild Owyhee)
 figure_quarto("/showcase/owyhee/precip.png")
     # '![](/showcase/owyhee/precip.png)'
 ```
