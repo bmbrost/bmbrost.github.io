@@ -23,7 +23,7 @@ format:
 ---
 
 <!-- Add headshot -->
-<img class="about-image" src="media/headshot_1.jpg" style="width:12em; height:12em;">
+<img class="about-image" src="media/headshot.jpg" style="width:12em; height:12em;">
 
 <!-- Name, headline, and links -->
 ::: {.title}
