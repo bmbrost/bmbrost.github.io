@@ -231,6 +231,7 @@ owyhee_plot <- hillshade_plot +
       hjust = 0.5,
       vjust = -1.
     ),
+    plot.title.position = "plot",
     plot.subtitle = element_text(
       family = "gilda",
       size = base_text_size * 1,
