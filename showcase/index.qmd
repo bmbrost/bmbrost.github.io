@@ -111,6 +111,11 @@ figure_quarto("/showcase/dgo/dgo.png",
               # '![](/showcase/dgo/dgo.png)',
               'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/dgo/dgo.R')
 
+# Population density of the Colorado Plateau and Southern Rockies
+figure_quarto("/showcase/bertin/bertin.png",
+              # '![](/showcase/dgo/dgo.png)',
+              'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/bertin/bertin.R')
+
 ```
 
 :::
