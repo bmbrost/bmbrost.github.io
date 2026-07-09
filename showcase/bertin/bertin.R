@@ -234,12 +234,6 @@ ggplot() +
       label.position = "right"
     )
   ) +
-  # annotate(
-  #   geom="text", 
-  #   x = -Inf, y = -Inf, 
-  #   label = "B. Brost \U2022 Ochotona Analytics",
-  #   hjust = -0.1, vjust = -0.5, size=3,family="gilda"
-  # ) +
   labs(
     title = "Population density of the Colorado Plateau and So. Rockies",
     subtitle = "Following Jacques Bertin's Valued Points",
@@ -253,11 +247,11 @@ ggplot() +
     plot.background = element_rect(fill = "white", color = NA),
     legend.position = "right",
     legend.title = element_text(family="gilda",hjust=0.5,vjust=-0.25,size=10),
-    legend.text = element_text(family="gilda",size=8),
+    legend.text = element_text(family="gilda",size=10),
     plot.title = element_text(family="gilda",hjust = 0.5),
     plot.title.position = "plot",
     plot.subtitle = element_text(family="gilda", hjust = 0.5, color = "grey50"),
-    plot.caption = element_text(family="gilda",hjust=1.35,vjust=-5,size=8)
+    plot.caption = element_text(family="gilda",hjust=1.35,vjust=-5,size=10)
   )
 
 
