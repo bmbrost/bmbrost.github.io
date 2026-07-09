@@ -1,16 +1,14 @@
 ###
+###
 ### Population density of the Colorado Plateau, Arizona/New Mexico Plateau, and
-### Southern Rockies in the way of Jacques Bertin's valued dots map
+### Southern Rockies following Jacques Bertin's valued dots map
+###
 ###
 
-# Resources:
-#   1. https://r-graph-gallery.com/web-valued-dots-map-bertin.html
-#   2. https://dieghernan.github.io/202312_bertin_dots/
 
-
-################################################################################ 
+################################################################################
 ### Libraries and subroutines
-################################################################################ 
+################################################################################
 
 library(tidyverse)
 library(terra)
@@ -27,18 +25,20 @@ wgs <- "epsg:4326"
 albers <- "epsg:5070"  # equal area CRS
 
 font_add_google(name = "Gilda Display", family = "gilda") # add custom fonts
+font_add_google(name = "Shalimar", family = "shalimar") # add custom fonts
+
 showtext_auto()
 
 
-################################################################################ 
+################################################################################
 ### Download spatial data
-################################################################################ 
+################################################################################
 
 ###
 ### Boundary of Colorado Plateau, AZ/NM Plateau, and Southern Rockies
 ###
 
-# Note: Boundary is based on the EPA's Level III Ecoregions as detailed here: 
+# Boundary is based on the EPA's Level III Ecoregions as detailed here:
 #   https://www.epa.gov/eco-research/ecoregions-north-america
 
 # URL to EPA Level III Shapefile
@@ -57,17 +57,21 @@ eco <- st_read(list.files(tmp_dir, pattern = "\\.shp$", full.names = TRUE)[1])
 
 # Extract CO/AZ/NM Plateaus and Southern Rockies Ecoregions
 eco <- eco %>%
-  filter(NA_L3NAME %in% c("Colorado Plateaus",
-                          "Arizona/New Mexico Plateau",
-                          "Southern Rockies")) %>%
+  filter(
+    NA_L3NAME %in% c(
+      "Colorado Plateaus",
+      "Arizona/New Mexico Plateau",
+      "Southern Rockies"
+    )
+  ) %>%
   st_transform(albers)
 
 # Quick check
 eco %>%
-  ggplot() + 
+  ggplot() +
   geom_sf()
 
-# Derivatives used for plotting
+# Derived products used for plotting
 eco_union <- eco %>% st_union()
 eco_bbox <- st_as_sfc(st_bbox(eco))
 eco_inverse <- eco_bbox %>% st_difference(eco_union)
@@ -79,33 +83,20 @@ eco_inverse <- eco_bbox %>% st_difference(eco_union)
 
 pop <- geodata::population(year = 2020, res = 0.5, path = tmp_dir)
 
-pop_crop <- pop %>% 
-  terra::crop(eco %>% st_transform(wgs), mask=TRUE) %>%  # crop to ecoregions
-  terra::project(albers, method="bilinear")  # project to albers
+pop_crop <- pop %>%
+  terra::crop(eco %>% st_transform(wgs), mask = TRUE) %>%  # crop to ecoregions
+  terra::project(albers, method = "bilinear")  # project to albers
 
 plot(pop_crop)
 
-# Reduce resolution 
+# Reduce resolution
 f <- round(nrow(pop_crop) / 100)  # factor to reduce raster to ~100 rows
-pop_agg <- terra::aggregate(pop_crop, fact = f, fun = "sum", na.rm = TRUE)
+pop_agg <- terra::aggregate(pop_crop,
+                            fact = f,
+                            fun = "sum",
+                            na.rm = TRUE)
 
 plot(pop_agg)
-
-# Square grid
-# pop_points <- pop_hex %>%
-#   mutate(area = values(terra::cellSize(pop_hex, unit = "km")),
-#     density = count / area) %>%  # density by cell
-#   select(density) %>%
-#   as.points() %>%  # convert to points
-#   mutate(class = case_when(  # categorize into density classes
-#     density < 1 ~ "A",
-#     density < 5 ~ "B",
-#     density < 20 ~ "C",
-#     density < 100 ~ "D",
-#     density < 500 ~ "E",
-#     density < 1500 ~ "F",
-#     TRUE ~ "G"
-#   ))
 
 
 ###
@@ -119,8 +110,7 @@ area <- cellSize(pop_agg, unit = "km") %>%  # average cell size of pop_agg
 area
 
 # Create hexagonal grid
-pop_hex <- st_make_grid(eco, square = FALSE,
-                        cellsize = sqrt(2 * area / sqrt(3)))  # infer hex diameter
+pop_hex <- st_make_grid(eco, square = FALSE, cellsize = sqrt(2 * area / sqrt(3)))  # infer hex diameter
 
 area <- st_area(pop_hex) %>%  # area of hexagons
   units::set_units("km^2") %>%
@@ -129,26 +119,30 @@ area <- st_area(pop_hex) %>%  # area of hexagons
 pop_hex <- st_sf(area = area, geom = pop_hex)
 
 # Extract aggregated population by hex cell
-pop_hex$count <- exact_extract(pop_agg, y = pop_hex, progress = FALSE,
+pop_hex$count <- exact_extract(pop_agg,
+                               y = pop_hex,
+                               progress = FALSE,
                                fun = "sum")
 
 # Convert population per cell to density (people per km2)
 pop_points <- pop_hex %>%
-  mutate(# area = values(terra::cellSize(pop_hex, unit = "km")),
-         density = count / area) %>%  # density by cell
+  mutate(
+    density = count / area  # density by cell
+  ) %>%
   select(density) %>%
   st_centroid(of_largest_polygon = TRUE) %>%
   st_intersection(eco) %>%
-  # as.points() %>%  # convert to points
-  mutate(class = case_when(  # categorize into density classes
-    density < 1 ~ "A",
-    density < 5 ~ "B",
-    density < 20 ~ "C",
-    density < 100 ~ "D",
-    density < 500 ~ "E",
-    density < 1500 ~ "F",
-    TRUE ~ "G"
-  ))
+  mutate(
+    class = case_when(  # categorize into density classes
+      density < 1 ~ "A",
+      density < 5 ~ "B",
+      density < 20 ~ "C",
+      density < 100 ~ "D",
+      density < 500 ~ "E",
+      density < 1500 ~ "F",
+      TRUE ~ "G"
+    )
+  )
 
 
 ###
@@ -158,36 +152,38 @@ pop_points <- pop_hex %>%
 set_overpass_url("https://overpass-api.de/api/interpreter")
 
 all_rivers <- eco_bbox %>% st_transform(wgs) %>%
-  opq()%>%
+  opq() %>%
   add_osm_feature(key = "waterway", value = "river") %>%
   osmdata_sf()
 
 # all_rivers$osm_lines$name
 
-river_names <- c("Colorado River",
-                 "Little Colorado River",
-                 "San Juan River",
-                 "Green River",
-                 "Dolores River",
-                 "Gunnison River",
-                 "Rio Grande",
-                 "Arkansas River")
+river_names <- c(
+  "Colorado River",
+  "Little Colorado River",
+  "San Juan River",
+  "Green River",
+  "Dolores River",
+  "Gunnison River",
+  "Rio Grande",
+  "Arkansas River"
+)
 
 river_lines <- all_rivers$osm_lines %>%
-  filter(name%in%river_names) %>%
+  filter(name %in% river_names) %>%
   st_transform(albers) %>%
   st_intersection(eco)
 
 river_multilines <- all_rivers$osm_multilines %>%
-  filter(name%in%river_names) %>%
+  filter(name %in% river_names) %>%
   st_transform(albers) %>%
   st_intersection(eco)
 
 
 
-################################################################################ 
+################################################################################
 ### Make map
-################################################################################ 
+################################################################################
 
 ggplot() +
   geom_sf(  # add Level III Ecoregion boundaries
@@ -198,64 +194,96 @@ ggplot() +
   ) +
   geom_sf(  # add rivers
     data = river_lines,
-    color="cyan4",
-    linewidth=0.25
+    color = "cyan4",
+    linewidth = 0.25
   ) +
   geom_sf(  # add rivers
     data = river_multilines,
-    color="cyan4",
-    linewidth=0.25
+    color = "cyan4",
+    linewidth = 0.25
   ) +
   geom_sf(  # add valued dots
     data = pop_points,
-    mapping=aes(size=class),
-    # mapping = aes(geometry = geometry, size = class),  # for square grid
-    pch = 21, color = "gray97", fill = "black", stroke = 0.5
+    mapping = aes(size = class),
+    pch = 21,
+    color = "gray97",
+    fill = "black",
+    stroke = 0.5
   ) +
   geom_sf(  # add inverse mask
     data = eco_inverse,
-    color=NA,
-    fill="white",
+    color = NA,
+    fill = "white",
   ) +
   geom_sf(  # add permiter of Ecoregions
     data = eco_union,
-    color="black",
-    fill=NA,
-    linewidth=0.3
+    color = "black",
+    fill = NA,
+    linewidth = 0.3
   ) +
   scale_size_manual(
     values = c(0.5, 0.75, 1, 1.5, 2, 3, 4),  # 7 classes total
     labels = c(
-      "0", "[1,5)", "[5,20)", "[20,100)", "[100,500)","[500,1500)","\u22651500"),
+      "0",
+      "[1,5)",
+      "[5,20)",
+      "[20,100)",
+      "[100,500)",
+      "[500,1500)",
+      "\u22651500"
+    ),
     guide = guide_legend(
-      ncol = 1,
+      nrow = 1,
       title.position = "top",
       keywidth = 1,
-      label.position = "right"
+      label.position = "bottom"
     )
   ) +
   labs(
-    title = "Population density of the Colorado Plateau and So. Rockies",
-    subtitle = "Following Jacques Bertin's Valued Points",
-    size = expression(paste("People per ",km^2)),
-    caption = "B. Brost \U2022 Ochotona Analytics"
+    title = "Population Density",
+    subtitle = "Colorado Plateau and So. Rockies",
+    size = expression(paste("Inhabitants per ", km^2)),
+    caption = "B. Brost | In the spirit of Jacques Bertin's Valued Points"
   ) +
   theme_void() +
-  # theme_bw() +
   theme(
     plot.margin = margin(1, 1, 1, 1, "cm"),
     plot.background = element_rect(fill = "white", color = NA),
-    legend.position = "right",
-    legend.title = element_text(family="gilda",hjust=0.5,vjust=-0.25,size=10),
-    legend.text = element_text(family="gilda",size=10),
-    plot.title = element_text(family="gilda",hjust = 0.5),
+    legend.position = "bottom",
+    legend.key.spacing.x = unit(7, "pt"),
+    legend.title = element_text(
+      family = "gilda",
+      size = 12,
+      hjust = 0.5,
+      vjust = -0.25
+    ),
+    legend.text = element_text(
+      family = "gilda",
+      size = 8,
+      hjust = 0.5,
+      vjust = 2
+    ),
+    plot.title = element_text(
+      family = "gilda",
+      size = 18,
+      hjust = 0.5
+    ),
     plot.title.position = "plot",
-    plot.subtitle = element_text(family="gilda", hjust = 0.5, color = "grey50"),
-    plot.caption = element_text(family="gilda",hjust=1.35,vjust=-5,size=10)
+    plot.subtitle = element_text(
+      family = "gilda",
+      size = 14,
+      hjust = 0.5
+    ),
+    plot.caption = element_text(
+      family = "shalimar",
+      size = 10,
+      hjust = 1,
+      vjust = -5
+    )
   )
 
 
-ggsave("out/bertin.pdf", height = 6, width = 6)
+ggsave("out/bertin.pdf", height = 8, width = 6)
 pdf_convert(
   "out/bertin.pdf",
   filenames = "out/bertin.png",
