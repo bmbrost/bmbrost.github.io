@@ -101,20 +101,19 @@ figure_quarto <- function(
 
 # source("R/figure_quarto.R")
 
-# Animas River discharge (animas)
-figure_quarto("/showcase/animas/animas.png",
-              # '![](/showcase/animas/animas.png)',
-              'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/animas/animas.R')
-
-# Map of Durango (dgo)
-figure_quarto("/showcase/dgo/dgo.png",
-              # '![](/showcase/dgo/dgo.png)',
-              'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/dgo/dgo.R')
+# Map of the Owyhee River watershed (The Wild Owyhee)
+figure_quarto("/showcase/owyhee/precip.png",
+              'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/owyhee/owyhee.R')
 
 # Population density of the Colorado Plateau and Southern Rockies
 figure_quarto("/showcase/bertin/bertin.png",
               # '![](/showcase/dgo/dgo.png)',
               'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/bertin/bertin.R')
+
+# Unknown Treasures
+figure_quarto("/showcase/treasures/treasures.png",
+              # '![](/showcase/dgo/dgo.png)',
+              'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/treasures/treasures.R')
 
 ```
 
@@ -129,14 +128,20 @@ figure_quarto("/showcase/bertin/bertin.png",
 
 # source("R/figure_quarto.R")
 
-# Map of the Owyhee River watershed (The Wild Owyhee)
-figure_quarto("/showcase/owyhee/precip.png",
-              'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/owyhee/owyhee.R')
+# Dark Skies Paonia (dark_night)
+figure_quarto("/showcase/dark_night/dark_night.png",
+              # '![](/showcase/animas/animas.png)',
+              'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/dark_night/dark_night.R')
 
-# Unknown Treasures
-figure_quarto("/showcase/treasures/treasures.png",
+# Animas River discharge (animas)
+figure_quarto("/showcase/animas/animas.png",
+              # '![](/showcase/animas/animas.png)',
+              'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/animas/animas.R')
+
+# Map of Durango (dgo)
+figure_quarto("/showcase/dgo/dgo.png",
               # '![](/showcase/dgo/dgo.png)',
-              'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/treasures/treasures.R')
+              'https://github.com/bmbrost/bmbrost.github.io/blob/main/showcase/dgo/dgo.R')
 
 ```
 
